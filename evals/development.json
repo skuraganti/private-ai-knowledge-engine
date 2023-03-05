@@ -1,0 +1,36 @@
+{
+  "split": "development",
+  "cases": [
+    {
+      "query": "What is confabulation in generative AI?",
+      "document_id": "genai-profile",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "query": "What does accountable and transparent mean?",
+      "document_id": "ai-rmf",
+      "pages": [
+        20,
+        21
+      ]
+    },
+    {
+      "query": "How does source code review reduce software vulnerabilities?",
+      "document_id": "ssdf",
+      "pages": [
+        23,
+        24
+      ]
+    },
+    {
+      "query": "What should governance policies establish?",
+      "document_id": "ai-rmf",
+      "pages": [
+        26,
+        27
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+[project]
+name = "folio-source-workbench"
+version = "0.1.0"
+description = "Local document lifecycle, hybrid retrieval and evidence-linked generation"
+requires-python = ">=3.13"
+dependencies = ["fastapi", "uvicorn", "numpy", "scikit-learn", "pypdf", "httpx"]
+[dependency-groups]
+dev = ["pytest", "ruff"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+[tool.ruff.lint]
+select = ["E", "F", "I"]

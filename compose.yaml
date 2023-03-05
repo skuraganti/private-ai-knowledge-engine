@@ -1,0 +1,39 @@
+name: portfolio-release-2023-folio
+services:
+  app:
+    build:
+      context: .
+      args:
+        FOLIO_UID: "${FOLIO_UID:-501}"
+    image: portfolio-release-2023-folio:local
+    ports:
+      - "127.0.0.1:${FOLIO_PORT:-8283}:8000"
+    environment:
+      FOLIO_DB: /state/folio.sqlite
+      FOLIO_PREPARED: /corpus
+      FOLIO_BRIDGE: /bridge
+    volumes:
+      - folio-state:/state
+      - ./data/prepared:/corpus:ro
+      - ./data/bridge:/bridge
+    networks: [folio]
+    read_only: true
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=32m"]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    pids_limit: 64
+    mem_limit: 512m
+    cpus: 1.0
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"]
+      interval: 10s
+      timeout: 4s
+      retries: 5
+      start_period: 15s
+networks:
+  folio:
+    name: portfolio-release-2023-folio-network
+volumes:
+  folio-state:
+    name: portfolio-release-2023-folio-state

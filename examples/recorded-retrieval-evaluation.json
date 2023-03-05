@@ -1,0 +1,54 @@
+{
+  "available": true,
+  "at": "2026-10-16T10:04:34.184656+00:00",
+  "methodology": "12 root-authored held-out questions frozen before retrieval evaluation; single original corpus snapshot, top5 indexed chunks, designated physical PDF page anchors. BM25, local TF-IDF/SVD and equal-weight reciprocal-rank fusion(k60). No question labels used in model fitting and no held-out tuning.",
+  "limitations": "Page-anchor relevance is incomplete and overlapping chunks can repeat pages. Hit@5 and MRR are against designated pages, not exhaustive relevance judgments. One small English institutional corpus; no general superiority claim. First latent query includes index fitting; sequential timings are observations, not a controlled benchmark.",
+  "counts": {
+    "documents": 3,
+    "chunks": 318
+  },
+  "freeze": {
+    "at": "2026-10-16T09:38:54.439548+00:00",
+    "heldout_sha256": "ed90351012a87ceec9a74d466d0035ec412837495685bdb585624adadda46e13",
+    "policy": "No held-out-specific ranking/prompt tuning. Report all cases and baselines; any subsequent retune requires a new heldout set."
+  },
+  "source_hashes": {
+    "ai-rmf": "7576edb531d9848825814ee88e28b1795d3a84b435b4b797d3670eafdc4a89f1",
+    "genai-profile": "6e73620ab6b64e90ef2c04bf0e0d6246185a2f4b1b13cab0df494496cff89b6a",
+    "ssdf": "617746e553a9e2da49bfbd4eef0dfc3094758a39b869314e4173ac36605cde22"
+  },
+  "retrieval": {
+    "metrics": [
+      {
+        "mode": "lexical",
+        "n": 12,
+        "hit_at_5": 0.9166666666666666,
+        "mrr": 0.8611111111111112,
+        "designated_page_recall_at_5": 0.875,
+        "mean_ms": 1.5584166666666666,
+        "median_ms": 1.533
+      },
+      {
+        "mode": "latent",
+        "n": 12,
+        "hit_at_5": 0.8333333333333334,
+        "mrr": 0.6486111111111111,
+        "designated_page_recall_at_5": 0.7916666666666666,
+        "mean_ms": 9.07225,
+        "median_ms": 1.84
+      },
+      {
+        "mode": "hybrid",
+        "n": 12,
+        "hit_at_5": 0.9166666666666666,
+        "mrr": 0.8083333333333332,
+        "designated_page_recall_at_5": 0.875,
+        "mean_ms": 2.47575,
+        "median_ms": 2.4745
+      }
+    ]
+  },
+  "live": {
+    "note": "Recorded live-model evaluation is documented in VERIFICATION.md; no model calls are part of bootstrap."
+  }
+}

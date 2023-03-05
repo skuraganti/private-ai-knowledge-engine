@@ -1,0 +1,5 @@
+{
+  "at": "2026-10-16T09:38:54.439548+00:00",
+  "heldout_sha256": "ed90351012a87ceec9a74d466d0035ec412837495685bdb585624adadda46e13",
+  "policy": "No held-out-specific ranking/prompt tuning. Report all cases and baselines; any subsequent retune requires a new heldout set."
+}

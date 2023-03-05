@@ -1,0 +1,104 @@
+{
+  "frozen_at": "2026-10-16T09:38:54.439548+00:00",
+  "split": "heldout",
+  "method": "Root-authored questions and designated physical PDF page anchors, frozen before retrieval evaluation; not read by implementation worker. No labels trained into TFIDF/SVD. Page relevance is bounded, not exhaustive corpus annotation.",
+  "cases": [
+    {
+      "id": "h01",
+      "query": "Does the AI RMF prescribe an organization’s acceptable risk tolerance?",
+      "document_id": "ai-rmf",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": "h02",
+      "query": "What quantitative or qualitative tools does the MEASURE function employ?",
+      "document_id": "ai-rmf",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": "h03",
+      "query": "What four functions form the AI RMF Core, and are they an ordered checklist?",
+      "document_id": "ai-rmf",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": "h04",
+      "query": "What makes an AI system resilient when its environment changes unexpectedly?",
+      "document_id": "ai-rmf",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "h05",
+      "query": "What privacy risks can arise when generative AI discloses sensitive personal data?",
+      "document_id": "genai-profile",
+      "pages": [
+        11,
+        12
+      ]
+    },
+    {
+      "id": "h06",
+      "query": "How can human over-reliance on a generative AI system create risk?",
+      "document_id": "genai-profile",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": "h07",
+      "query": "Why can repeatedly training on synthetic data lead to model collapse?",
+      "document_id": "genai-profile",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": "h08",
+      "query": "How does intentional disinformation differ from unintentional misinformation?",
+      "document_id": "genai-profile",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": "h09",
+      "query": "What does MS-2.5-003 recommend about sources and citations in generated outputs?",
+      "document_id": "genai-profile",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": "h10",
+      "query": "Which four groups organize the secure development practices in SSDF 1.1?",
+      "document_id": "ssdf",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": "h11",
+      "query": "What does PW.9 say about secure software configuration defaults?",
+      "document_id": "ssdf",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": "h12",
+      "query": "Why should developers analyze the root causes of vulnerabilities under RV.3?",
+      "document_id": "ssdf",
+      "pages": [
+        27
+      ]
+    }
+  ]
+}

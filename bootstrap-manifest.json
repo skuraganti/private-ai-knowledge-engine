@@ -1,0 +1,18 @@
+{
+  "files": [
+    {
+      "source": "examples/recorded-retrieval-evaluation.json",
+      "target": "data/prepared/evaluation.json",
+      "sha256": "f98c68aaf39f542e79cc53ab5a3fa28dcb6ab41a0f8ee3d2ef16620e86ea58c0"
+    }
+  ],
+  "commands": [
+    {
+      "ready_file": "data/prepared/manifest.json",
+      "argv": [
+        "scripts/acquire.py"
+      ]
+    }
+  ],
+  "note": "Only declared public-publisher inputs/approved examples are included; MoneyVis transaction data are excluded."
+}
