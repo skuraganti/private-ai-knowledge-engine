@@ -7,4 +7,4 @@
 5. Delete/restore a public source only when intentionally demonstrating invalidation: deletion survives restart; explicit restore creates a later version. Acquisition originals stay in the excluded local cache. The original local acceptance run verified this using SSDF version3; fresh clones start with their own state.
 6. Open the evaluation notebook. Lexical/hybrid designated-page Hit@5 were11/12; latent10/12. Read the lower hybrid MRR and development definition miss alongside the three tiny held-out live checks. Do not present this as a broad benchmark or production policy/compliance guidance.
 
-Stop your stack with `sh stack.sh stop` when finished. Data persist in its local volume. Actual development was2026-10-16; the name2023 is the theme.
+Stop your stack with `sh stack.sh stop` when finished. Data persist in its local volume.

@@ -19,7 +19,7 @@ function renderShelf() { const root = $('documents'); clear(root); for (const do
     link.href = doc.url;
     link.target = '_blank';
     link.rel = 'noreferrer';
-    el('small', ` · ${doc.publication} · SHA-256 ${doc.sha256}`, row);
+    el('small', ` · SHA-256 ${doc.sha256}`, row);
     const toggle = button(hidden.has(doc.id) ? 'Show' : 'Hide', `toggle-${doc.id}`, row, () => { hidden.has(doc.id) ? hidden.delete(doc.id) : hidden.add(doc.id); updateVisibility(); renderShelf(); });
     toggle.className = 'secondary';
 } }
@@ -55,7 +55,7 @@ setup();
 fetch('./demo-data.json').then(response => { if (!response.ok)
     throw Error('Fixture unavailable'); return response.json(); }).then(json => { if (!Array.isArray(json.documents) || json.documents.length !== 3 || !Array.isArray(json.passages) || !Array.isArray(json.retrieval_metrics) || !json.passages.every(p => typeof p.text === 'string' && Number.isFinite(p.page) && typeof p.source_url === 'string'))
     throw Error('Unexpected NIST fixture structure'); data = json; json.documents.forEach(doc => $('document').add(new Option(doc.title, doc.id))); renderShelf(); renderMetrics(); const attribution = $('source-attribution'); clear(attribution); json.documents.forEach((doc, index) => { if (index)
-    attribution.append(document.createTextNode(' · ')); el('span', `${doc.title} (${doc.publication}), `, attribution); const link = el('a', doc.url, attribution); link.href = doc.url; link.target = '_blank'; link.rel = 'noreferrer'; }); $('status').textContent = `${json.passages.length} original passages across ${json.documents.length} NIST documents loaded. Browser lexical search only.`; }).catch(error => { $('status').textContent = `Cannot load NIST passage fixture: ${error.message}. Reload to try again.`; $('status').className = 'status error'; });
+    attribution.append(document.createTextNode(' · ')); el('span', `${doc.title}, `, attribution); const link = el('a', doc.url, attribution); link.href = doc.url; link.target = '_blank'; link.rel = 'noreferrer'; }); $('status').textContent = `${json.passages.length} original passages across ${json.documents.length} NIST documents loaded. Browser lexical search only.`; }).catch(error => { $('status').textContent = `Cannot load NIST passage fixture: ${error.message}. Reload to try again.`; $('status').className = 'status error'; });
 function labelScrollableContent() {
     document.querySelectorAll('.scroll, pre').forEach(node => {
         node.tabIndex = 0;

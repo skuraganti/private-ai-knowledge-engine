@@ -3679,7 +3679,5 @@
     "What does the AI RMF Govern function address?"
   ],
   "limit": "Full application adds hybrid FTS5/TF-IDF-SVD/RRF and approved-model answers. Matching quotes do not prove every claim.",
-  "theme_year": 2023,
-  "developed_at": "2026-10-16",
-  "repository": "https://github.com/skuraganti/2023-private-ai-knowledge-engine"
+  "repository": "https://github.com/skuraganti/private-ai-knowledge-engine"
 }

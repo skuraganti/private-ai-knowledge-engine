@@ -1,6 +1,6 @@
 # Folio development and publication plan
 
-Theme2023; actual development/publication preparation2026-10-16. The full application is independent, useful and locally runnable. Original-document ingestion, hybrid FTS5/TF-IDF-SVD retrieval, source-linked RAG, incremental updates, deletion propagation and held-out evaluation.
+Actual development/publication preparation2026-10-16. The full application is independent, useful and locally runnable. Original-document ingestion, hybrid FTS5/TF-IDF-SVD retrieval, source-linked RAG, incremental updates, deletion propagation and held-out evaluation.
 
 Completed original milestones: define user/workflow/non-goals; compare real-data candidates; pin sources/licenses; scoped Claude implementation; lead integration and corrections; native/Docker/browser/persistence checks; record actual results and limitations. Public release adds a separate static browser demo, reviewed examples, reproducible bootstrap, portable configuration and publication checks before an initial commit.
 
