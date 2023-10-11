@@ -1,5 +1,7 @@
 # Demonstration
 
+For a fresh checkout, first run `uv sync --frozen` and `uv run python scripts/bootstrap.py` as described in [README.md](README.md). Then follow the walkthrough below.
+
 1. `sh stack.sh up`; open http://127.0.0.1:8283. Confirm three original documents and a truthful bridge status. Search remains available if inference is offline.
 2. Select SSDF. Ask **What does PW.9 say about secure software configuration defaults?** Compare lexical/latent/hybrid, inspect physical PDF25 and the raw-source hash.
 3. Read the recorded results on the Pages demonstration, or configure your own approved bridge before deliberately requesting a bounded generation locally. Read its claims and exact supporting quotes; inspect the publisher-page link. An unavailable provider or exhausted workspace cap stays an explicit error, not a fabricated answer.
