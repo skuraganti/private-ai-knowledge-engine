@@ -1,0 +1,68 @@
+{
+  "cases_sha256": "8f85aecd83993ba0b2cbf56b49704789ecb6be0388fd0b4d1bc54c9a29c95cc5",
+  "prepared_manifest_sha256": "676fc09bad7d520a928413f58b7ede18248ff5e60f1186c9dcda1a6f0703aef4",
+  "preparation_sha256": "f5ced51057e2d73089badb0cbed47d970232516e36aa9db0b244f95017999946",
+  "sources": [
+    {
+      "id": "ai-rmf",
+      "sha256": "7576edb531d9848825814ee88e28b1795d3a84b435b4b797d3670eafdc4a89f1"
+    },
+    {
+      "id": "genai-profile",
+      "sha256": "6e73620ab6b64e90ef2c04bf0e0d6246185a2f4b1b13cab0df494496cff89b6a"
+    },
+    {
+      "id": "ssdf",
+      "sha256": "617746e553a9e2da49bfbd4eef0dfc3094758a39b869314e4173ac36605cde22"
+    }
+  ],
+  "algorithm_sha256": {
+    "app/retrieval.py": "9403551e2526b50774adaf1ec47775760db8ee04b611a63680d76be7a7fac68b",
+    "app/store.py": "5f877bb71578f37c87f24fe94945a61681e67edfbdb543d9e893eabac61e3c46"
+  },
+  "frozen_at": "2026-10-16T21:27:38.468529+00:00",
+  "parameters": {
+    "cases": 24,
+    "documents": [
+      "ai-rmf",
+      "genai-profile",
+      "ssdf"
+    ],
+    "cases_per_document": 8,
+    "category_mix_per_document": {
+      "direct": 3,
+      "procedural": 3,
+      "nearby": 2
+    },
+    "modes": [
+      "lexical",
+      "latent",
+      "hybrid"
+    ],
+    "limit": 5,
+    "requests_per_case_per_mode": 1,
+    "planned_retrieval_requests": 72,
+    "query_scope": "all_three_original_active_documents; gold document IDs are grading-only",
+    "metrics": [
+      "page_hit_at_5",
+      "page_mrr_at_5"
+    ],
+    "page_basis": "1-based physical PDF page",
+    "model_calls_allowed": 0,
+    "top_k": 5
+  },
+  "policy": {
+    "first_evaluation_requires": "lead and independent source-review acceptance of these exact artifacts",
+    "implementation_task_context": "schema/protocol only; cases and support excluded",
+    "v1": "preserve unchanged and report separately",
+    "post_evaluation_tuning": "prohibited for this reported set; preserve original results and version corrections",
+    "network_model_installation_during_authoring": "none",
+    "evaluation_during_authoring": "none",
+    "review_status": "source cases accepted independently and by supervising review before first evaluation",
+    "accepted_proposal_sha256": "df6bcb35cef6676bba32eca7f8649c87a8fbafdda5a131f1c5d0b21232bb1c9f",
+    "protocol_sha256": "19449aadd760f08a2d69e12d549c62406193c791f67073b1594efd0aa14e3851",
+    "source_check_sha256": "6febf3502dde308107ffa30211c4b45b7f4a75d7b80750117b046c2e91059ccc",
+    "source_hash_origin": "original PDF hashes declared by pinned prepared manifest; no new PDF download/extraction/rehash in this pass",
+    "schema_note": "Runner freeze derives from the preserved accepted richer proposal; case and source pins are unchanged."
+  }
+}

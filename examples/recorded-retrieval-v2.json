@@ -1,0 +1,5357 @@
+{
+  "evaluation": "retrieval-v2",
+  "complete": true,
+  "request_failures": [],
+  "model_budget": {
+    "before": {
+      "attempted": 0,
+      "limit": 10,
+      "pending": 0
+    },
+    "after": {
+      "attempted": 0,
+      "limit": 10,
+      "pending": 0
+    }
+  },
+  "generated_at": "2026-10-16T21:30:50.764603+00:00",
+  "observational_note": "One sequential pass on one machine. Timings are observations, not a controlled latency benchmark; the first latent query fits TF-IDF/SVD (cold start). Designated pages are incomplete relevance labels, so scores are not broad accuracy claims.",
+  "cold_start": {
+    "mode": "latent",
+    "case_id": "v2-ai-rmf-direct-01",
+    "took_ms": 89.203
+  },
+  "parameters": {
+    "top_k": 5,
+    "modes": [
+      "lexical",
+      "latent",
+      "hybrid"
+    ],
+    "candidates": [
+      "ai-rmf",
+      "genai-profile",
+      "ssdf"
+    ]
+  },
+  "corpus": {
+    "documents": 3,
+    "chunks": 318
+  },
+  "summary": {
+    "lexical": {
+      "n": 24,
+      "hits_at_5": 20,
+      "hit_at_5": 0.8333333333333334,
+      "mrr_at_5": 0.7118055555555555,
+      "designated_page_recall_at_5": 0.8333333333333334,
+      "misses": [
+        "v2-ai-rmf-direct-02",
+        "v2-ai-rmf-procedural-01",
+        "v2-ai-rmf-procedural-03",
+        "v2-genai-profile-direct-03"
+      ]
+    },
+    "latent": {
+      "n": 24,
+      "hits_at_5": 17,
+      "hit_at_5": 0.7083333333333334,
+      "mrr_at_5": 0.5604166666666667,
+      "designated_page_recall_at_5": 0.7083333333333334,
+      "misses": [
+        "v2-ai-rmf-direct-02",
+        "v2-ai-rmf-procedural-01",
+        "v2-ai-rmf-procedural-03",
+        "v2-genai-profile-direct-03",
+        "v2-genai-profile-procedural-01",
+        "v2-genai-profile-procedural-02",
+        "v2-ssdf-procedural-02"
+      ]
+    },
+    "hybrid": {
+      "n": 24,
+      "hits_at_5": 19,
+      "hit_at_5": 0.7916666666666666,
+      "mrr_at_5": 0.6666666666666666,
+      "designated_page_recall_at_5": 0.7916666666666666,
+      "misses": [
+        "v2-ai-rmf-procedural-01",
+        "v2-ai-rmf-procedural-03",
+        "v2-genai-profile-direct-03",
+        "v2-genai-profile-procedural-01",
+        "v2-genai-profile-procedural-02"
+      ]
+    }
+  },
+  "by_document": {
+    "lexical": {
+      "ai-rmf": {
+        "n": 8,
+        "hits_at_5": 5,
+        "hit_at_5": 0.625,
+        "mrr_at_5": 0.5625,
+        "designated_page_recall_at_5": 0.625,
+        "misses": [
+          "v2-ai-rmf-direct-02",
+          "v2-ai-rmf-procedural-01",
+          "v2-ai-rmf-procedural-03"
+        ]
+      },
+      "genai-profile": {
+        "n": 8,
+        "hits_at_5": 7,
+        "hit_at_5": 0.875,
+        "mrr_at_5": 0.6354166666666666,
+        "designated_page_recall_at_5": 0.875,
+        "misses": [
+          "v2-genai-profile-direct-03"
+        ]
+      },
+      "ssdf": {
+        "n": 8,
+        "hits_at_5": 8,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 0.9375,
+        "designated_page_recall_at_5": 1.0,
+        "misses": []
+      }
+    },
+    "latent": {
+      "ai-rmf": {
+        "n": 8,
+        "hits_at_5": 5,
+        "hit_at_5": 0.625,
+        "mrr_at_5": 0.43125,
+        "designated_page_recall_at_5": 0.625,
+        "misses": [
+          "v2-ai-rmf-direct-02",
+          "v2-ai-rmf-procedural-01",
+          "v2-ai-rmf-procedural-03"
+        ]
+      },
+      "genai-profile": {
+        "n": 8,
+        "hits_at_5": 5,
+        "hit_at_5": 0.625,
+        "mrr_at_5": 0.46875,
+        "designated_page_recall_at_5": 0.625,
+        "misses": [
+          "v2-genai-profile-direct-03",
+          "v2-genai-profile-procedural-01",
+          "v2-genai-profile-procedural-02"
+        ]
+      },
+      "ssdf": {
+        "n": 8,
+        "hits_at_5": 7,
+        "hit_at_5": 0.875,
+        "mrr_at_5": 0.78125,
+        "designated_page_recall_at_5": 0.875,
+        "misses": [
+          "v2-ssdf-procedural-02"
+        ]
+      }
+    },
+    "hybrid": {
+      "ai-rmf": {
+        "n": 8,
+        "hits_at_5": 6,
+        "hit_at_5": 0.75,
+        "mrr_at_5": 0.6041666666666666,
+        "designated_page_recall_at_5": 0.75,
+        "misses": [
+          "v2-ai-rmf-procedural-01",
+          "v2-ai-rmf-procedural-03"
+        ]
+      },
+      "genai-profile": {
+        "n": 8,
+        "hits_at_5": 5,
+        "hit_at_5": 0.625,
+        "mrr_at_5": 0.5416666666666666,
+        "designated_page_recall_at_5": 0.625,
+        "misses": [
+          "v2-genai-profile-direct-03",
+          "v2-genai-profile-procedural-01",
+          "v2-genai-profile-procedural-02"
+        ]
+      },
+      "ssdf": {
+        "n": 8,
+        "hits_at_5": 8,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 0.8541666666666666,
+        "designated_page_recall_at_5": 1.0,
+        "misses": []
+      }
+    }
+  },
+  "by_category": {
+    "lexical": {
+      "direct": {
+        "n": 9,
+        "hits_at_5": 7,
+        "hit_at_5": 0.7777777777777778,
+        "mrr_at_5": 0.7222222222222222,
+        "designated_page_recall_at_5": 0.7777777777777778,
+        "misses": [
+          "v2-ai-rmf-direct-02",
+          "v2-genai-profile-direct-03"
+        ]
+      },
+      "nearby": {
+        "n": 6,
+        "hits_at_5": 6,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 0.8333333333333334,
+        "designated_page_recall_at_5": 1.0,
+        "misses": []
+      },
+      "procedural": {
+        "n": 9,
+        "hits_at_5": 7,
+        "hit_at_5": 0.7777777777777778,
+        "mrr_at_5": 0.6203703703703703,
+        "designated_page_recall_at_5": 0.7777777777777778,
+        "misses": [
+          "v2-ai-rmf-procedural-01",
+          "v2-ai-rmf-procedural-03"
+        ]
+      }
+    },
+    "latent": {
+      "direct": {
+        "n": 9,
+        "hits_at_5": 7,
+        "hit_at_5": 0.7777777777777778,
+        "mrr_at_5": 0.6111111111111112,
+        "designated_page_recall_at_5": 0.7777777777777778,
+        "misses": [
+          "v2-ai-rmf-direct-02",
+          "v2-genai-profile-direct-03"
+        ]
+      },
+      "nearby": {
+        "n": 6,
+        "hits_at_5": 6,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 0.7916666666666666,
+        "designated_page_recall_at_5": 1.0,
+        "misses": []
+      },
+      "procedural": {
+        "n": 9,
+        "hits_at_5": 4,
+        "hit_at_5": 0.4444444444444444,
+        "mrr_at_5": 0.35555555555555557,
+        "designated_page_recall_at_5": 0.4444444444444444,
+        "misses": [
+          "v2-ai-rmf-procedural-01",
+          "v2-ai-rmf-procedural-03",
+          "v2-genai-profile-procedural-01",
+          "v2-genai-profile-procedural-02",
+          "v2-ssdf-procedural-02"
+        ]
+      }
+    },
+    "hybrid": {
+      "direct": {
+        "n": 9,
+        "hits_at_5": 8,
+        "hit_at_5": 0.8888888888888888,
+        "mrr_at_5": 0.7592592592592592,
+        "designated_page_recall_at_5": 0.8888888888888888,
+        "misses": [
+          "v2-genai-profile-direct-03"
+        ]
+      },
+      "nearby": {
+        "n": 6,
+        "hits_at_5": 6,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 0.8888888888888888,
+        "designated_page_recall_at_5": 1.0,
+        "misses": []
+      },
+      "procedural": {
+        "n": 9,
+        "hits_at_5": 5,
+        "hit_at_5": 0.5555555555555556,
+        "mrr_at_5": 0.42592592592592593,
+        "designated_page_recall_at_5": 0.5555555555555556,
+        "misses": [
+          "v2-ai-rmf-procedural-01",
+          "v2-ai-rmf-procedural-03",
+          "v2-genai-profile-procedural-01",
+          "v2-genai-profile-procedural-02"
+        ]
+      }
+    }
+  },
+  "results": [
+    {
+      "case_id": "v2-ai-rmf-direct-01",
+      "category": "direct",
+      "document_id": "ai-rmf",
+      "mode": "lexical",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        19
+      ],
+      "designated_pages": [
+        19
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.764,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "729c75ca-6194-5ebf-988e-ab6bb9ad9dab",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 19,
+          "sha256": "df079fa1db3dd72bb1bc8a359c87726c720d0a48ddf12184c2980ee277970716",
+          "score": -17.13102253235698,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "74baeb41-fb35-5e17-a851-28ab4d6534fd",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 12,
+          "sha256": "a3a682de320ddc9fdc507b74e83f59d502f5bf9bd5d09d4fefbe7c859c687a97",
+          "score": -6.718552623573858,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "2bb49443-335d-5556-89ea-c51e5b0071ad",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 35,
+          "sha256": "dd9f3dc1072dd749e443c67e6cd8031cea828064f74ac3bbfdb9fa6849a3fd80",
+          "score": -6.620662532575112,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "03d97d51-f243-5efd-b587-c036cc6ebedc",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 11,
+          "sha256": "1bba5ba84b539fac8bb5730c00ca90b3334021362b9aa74f748a7dc407b620ea",
+          "score": -6.320526836521485,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "bc00a467-804b-5643-8a29-261d263ca4be",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 35,
+          "sha256": "53af763a4caaae953a07d0776838dec06682dbe5dbebf7a90aeb35f2d34bd084",
+          "score": -6.307532358040278,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-direct-02",
+      "category": "direct",
+      "document_id": "ai-rmf",
+      "mode": "lexical",
+      "first_relevant_rank": null,
+      "matched_pages": [],
+      "designated_pages": [
+        23
+      ],
+      "designated_page_recall": 0.0,
+      "took_ms": 1.686,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "0a7d3615-9a7e-50bf-9050-96c9e426887e",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 19,
+          "sha256": "dc894abf98b3396786e57e4e7365d8659da39c714f9609c65f49e96306db65cc",
+          "score": -6.982549602156261,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "620ce7a1-d6d6-59de-a3be-bc19aa2b1d2a",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 26,
+          "sha256": "ca85e89d290b3da506f1e280b6381777a587ed8c5953def61a3d0ada8e3d5524",
+          "score": -6.7210246107744505,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "0ea8a23a-f63d-5c7a-bf5b-0a91bfedd82d",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 44,
+          "sha256": "60b702c9a35597b87cf3a6d1b780031bba6cc0c745e66072c82c433febfe492b",
+          "score": -6.567541953238235,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "d1b8142b-0ab4-513c-95c1-280b00e502cd",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 4,
+          "sha256": "ee3619fb22ffd0bcd7dae9af444d8e72dc68b4c161ac29c6027ad0f67ae5961d",
+          "score": -6.529800091615627,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "bc00a467-804b-5643-8a29-261d263ca4be",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 35,
+          "sha256": "53af763a4caaae953a07d0776838dec06682dbe5dbebf7a90aeb35f2d34bd084",
+          "score": -6.37899676382696,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-direct-03",
+      "category": "direct",
+      "document_id": "ai-rmf",
+      "mode": "lexical",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        22
+      ],
+      "designated_pages": [
+        22
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.784,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "aafc5b98-213b-5e9c-971a-67eb9edffcc1",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 22,
+          "sha256": "6f0174a85f12d7dc91734d43cb2478bc26082f12fed70381d1e41fc06fb9f52b",
+          "score": -11.425104819255628,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "6457f688-bc59-5883-be55-b1d3da9ab4c6",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 39,
+          "sha256": "4bd3bc74826d31e8231fd002d907bc43de6be87a6de5db4a96bdeb655911eb2f",
+          "score": -7.3440712124577985,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "dfc72049-31c5-5c97-9bab-508c40e4061d",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 46,
+          "sha256": "025cf99396fac5685c7fd030e9b03697dd1a352fd05607763c5445005ee5485b",
+          "score": -7.329515819930051,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "51c007da-a7bd-5e1f-abde-c90f80877629",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 41,
+          "sha256": "3a9aa17a6edb79bcd86ba2ee2dd89af336dd30743b0b5ee242cd77d72427c0a6",
+          "score": -7.05363278700296,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "ad5df4f9-f0c2-58fd-b4b7-b12093add013",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 22,
+          "sha256": "d850dca663f03f54bbde7a01552ab78ab0cef40994d28b8a747fe5e23ff86b4a",
+          "score": -6.765790561184745,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-procedural-01",
+      "category": "procedural",
+      "document_id": "ai-rmf",
+      "mode": "lexical",
+      "first_relevant_rank": null,
+      "matched_pages": [],
+      "designated_pages": [
+        29
+      ],
+      "designated_page_recall": 0.0,
+      "took_ms": 2.815,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "d9ffe861-6631-5049-91e2-0a3eeb26b36b",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 25,
+          "sha256": "ff8d634614d4fa7e90a74f2e1b2b1da5e7b9aa3d37240d9fd0a076a228bce312",
+          "score": -8.918630987869745,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "a048c841-2e32-5e43-bec8-e8eec7a0c7b3",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 56,
+          "sha256": "c88c5bf530f7c136f2e2971b5de1de6c21e8689a0542065a12463750fea5016d",
+          "score": -8.039396203309146,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "30da4957-a9b8-5ac3-9919-0a5f2919475e",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 26,
+          "sha256": "e3d1e7444ac97f643ea34308c8d0cc77ecf710919633c32c7a6ea1ed42925519",
+          "score": -7.448008964624489,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "cc7c031b-25ac-5483-9356-e10be8d8830a",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 56,
+          "sha256": "880f23b8d506fe06e62b9373f1879052a130f8b1ea68eef44be7b8f698ba05cb",
+          "score": -6.700653960802601,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "f46fc9b8-5b82-59b2-9dce-0e3473a7990d",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 32,
+          "sha256": "020b5817d03bf36daa4353de85f78c62a555817ecea3f8162404191d2dae3e62",
+          "score": -6.202839613162415,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-procedural-02",
+      "category": "procedural",
+      "document_id": "ai-rmf",
+      "mode": "lexical",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        36
+      ],
+      "designated_pages": [
+        36
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 3.011,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "79135ae7-bf45-5fa9-a54d-991ee87d8768",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 36,
+          "sha256": "8228c8c05bf0f3eb612e386b6c6ad909cad1cb0215352f50d576e2e2d9199f29",
+          "score": -15.050888956920954,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "fd292160-1a7f-5cee-9b26-946eae9b3afe",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 42,
+          "sha256": "56c3ba91c92722887b7a7e62ccf317048876a138ef68c69a193a6a7637501f61",
+          "score": -11.579233427963526,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "7f6b49fa-9cc5-58e4-88a0-d3b9d9144bc0",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 34,
+          "sha256": "fc8bdfd6fb2dfb8a17e1ef919f707c36febf9570a6e1ad243283eb6c2d514718",
+          "score": -10.500503123059769,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "c7176069-a7b2-5efc-a600-5a2ef8ed4ed9",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 42,
+          "sha256": "adefd99aa65ee7f51766c56ce2a33b4c2fa7f50d11a69fba64c7db28e793c88d",
+          "score": -10.163643353058632,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "fff5cc22-a099-5445-a432-4d5cc2e2511c",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 49,
+          "sha256": "01c89ab050d1bc809d9e1c2a24c8ade26efd15cab1232d8ab1841e83e22a2473",
+          "score": -9.380524684646153,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-procedural-03",
+      "category": "procedural",
+      "document_id": "ai-rmf",
+      "mode": "lexical",
+      "first_relevant_rank": null,
+      "matched_pages": [],
+      "designated_pages": [
+        37
+      ],
+      "designated_page_recall": 0.0,
+      "took_ms": 1.845,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "55c57ebb-6212-5ce3-99e9-67068c0de762",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 12,
+          "sha256": "647c6ce7054f1ed7d87bed180b629dd56f3c9c792a9abe245eb491a2fa24633f",
+          "score": -4.959242155090577,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "24d29511-ee88-51e4-8953-097f3b981135",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 27,
+          "sha256": "d218f2086447854be0e186556a8a790a22a79011103c0c93fcb0921df75accc8",
+          "score": -3.3177374425455652,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "4f05afa0-5648-5a9d-ae2b-4b1ab3e548c8",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 3,
+          "sha256": "2d19581d0e70dd0d1e927575aa3f30963990da2a8c3ef94199393105584d3ef8",
+          "score": -3.2524529044496626,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "0023740f-99f5-56a3-8e81-7632aa9a25ce",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 10,
+          "sha256": "3c77fe895ff49a97c0e591f64d67274793475c090f6d1f89c4a4c1f5af365fd8",
+          "score": -3.204240379418796,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "8e35eadb-35db-5b6e-a30b-a356062952e6",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 14,
+          "sha256": "97add246f09b79f4bdc497c34c172a4282d83713881ace08dd0e71a26608acc4",
+          "score": -3.1855402944446225,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-nearby-01",
+      "category": "nearby",
+      "document_id": "ai-rmf",
+      "mode": "lexical",
+      "first_relevant_rank": 2,
+      "matched_pages": [
+        21
+      ],
+      "designated_pages": [
+        21
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.557,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "aafc5b98-213b-5e9c-971a-67eb9edffcc1",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 22,
+          "sha256": "6f0174a85f12d7dc91734d43cb2478bc26082f12fed70381d1e41fc06fb9f52b",
+          "score": -12.744408801583969,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "1614f111-3e54-5e83-951c-569cd9786fd0",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 21,
+          "sha256": "937b6b78006a2bd27ae3dbcf72dedd433f8e401349d8814c444eb9bce2c0978f",
+          "score": -11.605906723848753,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "44748ac9-e8ec-56a2-91a1-1fd296a213a1",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 43,
+          "sha256": "9ae90f3072bf76c097b69980433b11bb5a12524d916ea991b4cc15b57cf61705",
+          "score": -8.478396842719366,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "ca7f7da2-21df-5b55-8a05-558c24046c6a",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 17,
+          "sha256": "57ea3426dc7a0391032bcbd5db94ae6f12d37331111c70713dd55ea99c006acd",
+          "score": -5.912562013409588,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "707ff827-6422-547e-8727-ca97e1c30e03",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 39,
+          "sha256": "a103f90e7aff5be939abfaef13227ba9ad0c2f4c37b7566abb2ac880d08823f5",
+          "score": -5.674045432680919,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-nearby-02",
+      "category": "nearby",
+      "document_id": "ai-rmf",
+      "mode": "lexical",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        38
+      ],
+      "designated_pages": [
+        38
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.579,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "a0e0a643-6398-53b9-bdb5-895b0017c8c3",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 38,
+          "sha256": "f3f59785ebc6e1a791a0a93b49cd0af5fe20bead3e8e5d3d86aedf48cec156c3",
+          "score": -25.07575108330001,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "707ff827-6422-547e-8727-ca97e1c30e03",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 39,
+          "sha256": "a103f90e7aff5be939abfaef13227ba9ad0c2f4c37b7566abb2ac880d08823f5",
+          "score": -16.39003525172453,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "82dc0fed-4bcf-558e-8ea1-8ec646844460",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 38,
+          "sha256": "a6fc3ddab0bfe41dd7b393fa9ee92ca2d10b272e2d14b860edfbaa34c0fdb304",
+          "score": -12.666515429091787,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "89b99f3e-7ae0-5039-9a88-3a03d3899082",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 1,
+          "sha256": "813aa78fdac2f43cd54403e795c86d650fd99461f6f2917f407e51e8c9755a78",
+          "score": -12.153956990908851,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "1bfcf840-9f0c-5661-87d0-5dd739c65e58",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 2,
+          "sha256": "70e1c0b6f580da331bb5f0ca750b97b71555d9ab80d8d04bafe57083bc351999",
+          "score": -11.058662118408785,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-direct-01",
+      "category": "direct",
+      "document_id": "genai-profile",
+      "mode": "lexical",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        12
+      ],
+      "designated_pages": [
+        12
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.811,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "a2075a1c-b805-5d80-bd0a-36644e82fd1b",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 12,
+          "sha256": "1b7f20cc087c73abb05504b5f474c4c2c21ab5180f97bd1e5c59752e1dbf3ce4",
+          "score": -26.708472081529763,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "33903c96-6403-5eb8-b864-f6f69478bd5e",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 41,
+          "sha256": "05d37f6c46d9b9338dc258c96b96230ff1d674b15301894e1d2a137eda993252",
+          "score": -8.19340412318156,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "727499e5-6794-5821-a63e-f231bae57bbc",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 63,
+          "sha256": "fe0070ae3aece32e0809ce9df1275cae2a3d03e7b8d121e631e46826b7e673f9",
+          "score": -7.434067184789597,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "6a3e2a6d-ecb5-531b-9620-14be960d14d0",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 51,
+          "sha256": "b86cfd0520c19ed9e3c9157b5325707ef0903546a3d3a8dc569cee356b55a5eb",
+          "score": -5.456287761862057,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "dfd341e2-3fd6-504e-872f-3c6144520619",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 29,
+          "sha256": "7ee18cf0bacc8a66fc4ea5c059a15d674a34226ad614cdf1a4fedd2881299614",
+          "score": -5.38626041355546,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-direct-02",
+      "category": "direct",
+      "document_id": "genai-profile",
+      "mode": "lexical",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        55
+      ],
+      "designated_pages": [
+        55
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.524,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "9889ab44-002c-55fe-b37a-23a370ab4c2f",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "7f32d902e8742ee5f56166adba8fb7b7c839be25fd02e340d09259912fcaa74d",
+          "score": -14.88375954697682,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "edf7a562-b6db-5ba2-a59b-6baebdb612ff",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 56,
+          "sha256": "525a50ce4ee9fe96b84fd7eea60f51a88d130ed2083d6b29dd0eac3c58dd8382",
+          "score": -9.420728399934811,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "399eb6eb-6cc6-5105-a5d1-28289bce2886",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "6088f56eef833110cd8ec44cefb0123af40d0ffbb31c5a0b7e1933e6d002a48c",
+          "score": -9.056142110226787,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "9f867f4b-ed6a-50ed-9d4f-cffddb9f985d",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "353a03a5105e7bfe19c6c3e92cc8e58cec53cc0eccaf26c7e05d18d1de15871f",
+          "score": -8.620103901415604,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "3774f867-759b-5f90-934a-9ff4c1a705e7",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 25,
+          "sha256": "3a9f3a88597956511c3d87854770534718bdbff4ce9a819488161c467328414d",
+          "score": -7.728277012381784,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-direct-03",
+      "category": "direct",
+      "document_id": "genai-profile",
+      "mode": "lexical",
+      "first_relevant_rank": null,
+      "matched_pages": [],
+      "designated_pages": [
+        15
+      ],
+      "designated_page_recall": 0.0,
+      "took_ms": 1.605,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "89b99f3e-7ae0-5039-9a88-3a03d3899082",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 1,
+          "sha256": "813aa78fdac2f43cd54403e795c86d650fd99461f6f2917f407e51e8c9755a78",
+          "score": -9.814515067453616,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "9feae357-733e-5c03-988d-7ffbb072b19e",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 60,
+          "sha256": "1bc87e6126d74afc8dcf5ff0f8657e1e844edb95326fcd77d4b64d8087bb7c93",
+          "score": -9.150976325368429,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "1bfcf840-9f0c-5661-87d0-5dd739c65e58",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 2,
+          "sha256": "70e1c0b6f580da331bb5f0ca750b97b71555d9ab80d8d04bafe57083bc351999",
+          "score": -8.930046921412831,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "4cc958c4-28dd-5a84-a5ca-7b3b79852347",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 14,
+          "sha256": "5e4be412c579721c4d2e2421c3fe086df647de1f162a499984fd40827cc207b0",
+          "score": -6.570053561423384,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "a0e0a643-6398-53b9-bdb5-895b0017c8c3",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 38,
+          "sha256": "f3f59785ebc6e1a791a0a93b49cd0af5fe20bead3e8e5d3d86aedf48cec156c3",
+          "score": -5.530553910027894,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-procedural-01",
+      "category": "procedural",
+      "document_id": "genai-profile",
+      "mode": "lexical",
+      "first_relevant_rank": 4,
+      "matched_pages": [
+        21
+      ],
+      "designated_pages": [
+        21
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.89,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "53b35a3c-c986-5eaa-ae75-48fcd67c83ed",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 28,
+          "sha256": "1b133a10e61b25aaadd753f653ec6838fde4354b37a10c3a04055e90173cacef",
+          "score": -9.646827625131158,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "f25b685e-d794-5348-86e2-ba6a73470dbc",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 52,
+          "sha256": "3a4282ae09b4e39bed65ef38df458859a7f2cf4883970f1d3bb2d8395f1d877c",
+          "score": -7.588366648196589,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "a1706e09-c079-5bd5-85e9-0f7e5842ad5c",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 51,
+          "sha256": "c83b8444b465038fe63629a16d17770b86a92894eb462b529098207577d8b8a0",
+          "score": -7.584901270550777,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "de47a9ab-5677-5baa-9bb2-5567c75a8181",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 21,
+          "sha256": "7368d4d23932f10b40e078c79d37430e06e0ee4f7b7cb849d83fbe50b168300f",
+          "score": -7.176554055996398,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "6b88cb63-7200-5a1c-afce-d0017ed00158",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 18,
+          "sha256": "712ce54860f6724407603b06db46e769f443e1cb5699f5105bbda6d456f651bc",
+          "score": -5.941152107326424,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-procedural-02",
+      "category": "procedural",
+      "document_id": "genai-profile",
+      "mode": "lexical",
+      "first_relevant_rank": 3,
+      "matched_pages": [
+        25
+      ],
+      "designated_pages": [
+        25
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 4.187,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "5a531670-6e02-5b62-85d6-d501ef7a1601",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 24,
+          "sha256": "0ba21af9aae830925b5ec233f735d2417df89b04d3c70650945b7fee39f69c1a",
+          "score": -8.55782981626388,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "720d8f62-55bc-5dc3-9468-edaf8cf2189d",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 48,
+          "sha256": "14f4e632af99080ccffea696b9a1699927f120a38ce35ee4537ed1e0e3b8e84e",
+          "score": -8.086870864882107,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "3774f867-759b-5f90-934a-9ff4c1a705e7",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 25,
+          "sha256": "3a9f3a88597956511c3d87854770534718bdbff4ce9a819488161c467328414d",
+          "score": -7.98342448846555,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "6a3e2a6d-ecb5-531b-9620-14be960d14d0",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 51,
+          "sha256": "b86cfd0520c19ed9e3c9157b5325707ef0903546a3d3a8dc569cee356b55a5eb",
+          "score": -7.686606209384891,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "399eb6eb-6cc6-5105-a5d1-28289bce2886",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "6088f56eef833110cd8ec44cefb0123af40d0ffbb31c5a0b7e1933e6d002a48c",
+          "score": -6.514128928548955,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-procedural-03",
+      "category": "procedural",
+      "document_id": "genai-profile",
+      "mode": "lexical",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        57
+      ],
+      "designated_pages": [
+        57
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.947,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "e9e69c6d-09eb-5d16-a3ec-dcf460f1db06",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 57,
+          "sha256": "5c761166dfeb147bed9f3bd7e21d76c6bd328e107b60921345a2a8fe581ae657",
+          "score": -15.328463063361186,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "70e47782-1c9c-53c9-88d3-1466c55c3cfc",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 23,
+          "sha256": "8463ce4b395495f8f51151d0d1a6c34e8bf442314345a282bb65b180ee29b882",
+          "score": -8.409436599034544,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "30d8549b-d8a0-5dd9-8176-5c6100056116",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 6,
+          "sha256": "10dbf427f57239dfb8f8181ca56a5922e295982e1d38945a2e2f0b9c2eb84af4",
+          "score": -7.401366735419667,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "53b35a3c-c986-5eaa-ae75-48fcd67c83ed",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 28,
+          "sha256": "1b133a10e61b25aaadd753f653ec6838fde4354b37a10c3a04055e90173cacef",
+          "score": -6.914778518755306,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "880dd9a8-9fe8-5c10-9251-a7f00a11a07d",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 31,
+          "sha256": "ef0ad49f1ad4ffc60ff7088b28011afbdc3971ac8d68f9ce20d82ca3b1994780",
+          "score": -6.7813484666758495,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-nearby-01",
+      "category": "nearby",
+      "document_id": "genai-profile",
+      "mode": "lexical",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        15
+      ],
+      "designated_pages": [
+        15
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.55,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "feb6e26e-e674-5fa6-9ba9-92fff081c961",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 15,
+          "sha256": "d7b1e2aaf12a76cf81f1c9e5f9805c71f95774071cba8a8c21690dfa57423bc5",
+          "score": -23.720796144443185,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "ddb231b2-7db6-51cf-bfc6-6c145b6cff41",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 59,
+          "sha256": "aebecdcbb5964d23a4d042f9c18b9f87212d597caa838b30d66db663c5a38acd",
+          "score": -15.03908760582516,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "4cc958c4-28dd-5a84-a5ca-7b3b79852347",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 14,
+          "sha256": "5e4be412c579721c4d2e2421c3fe086df647de1f162a499984fd40827cc207b0",
+          "score": -13.98820918794823,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "60925dcf-bb76-5dfa-99eb-500ba6f6904b",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 37,
+          "sha256": "1df543bc1f6293b4807745836c9782f4ebb6f4b5563c410a65fa78a52a5fb957",
+          "score": -12.901489462277306,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "0d671541-c38d-5949-8bb8-fb7b62e76d76",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 58,
+          "sha256": "4b7025e98740a46142b4b89bcd262d862fc4bb17dbe47bc5ec8fdc1ff5b3bd1f",
+          "score": -10.598580602684395,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-nearby-02",
+      "category": "nearby",
+      "document_id": "genai-profile",
+      "mode": "lexical",
+      "first_relevant_rank": 2,
+      "matched_pages": [
+        53
+      ],
+      "designated_pages": [
+        53
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.646,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "73c1294f-e820-5062-b676-3afd1fd99065",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 54,
+          "sha256": "8a302a162e69e5a3de144505adf622c5c2fdfee200e2ff0c2212189b56f71c87",
+          "score": -17.4666500305902,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "7964b219-dbe4-5d9f-ba80-0d959207ca76",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 53,
+          "sha256": "36133c65ac68654fc81aa7e2ec3c006d065f254cec8566b72d3a7a344f230fca",
+          "score": -11.826590431924483,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "d251fe62-7295-5976-ab4c-1c270409d94d",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 59,
+          "sha256": "7a1a3bfe767d3416c5d25afdb0891110e85bb961170d03c964cfd9b22db17485",
+          "score": -11.593393570942691,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "b9594dec-e97b-5b40-a78a-5750a1c1f566",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 54,
+          "sha256": "3a6a84a90c57ff3d5e47739657c79a0a199c66700b4d8bd3a3b6fe9abe0eeafc",
+          "score": -10.496733654089144,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "edf7a562-b6db-5ba2-a59b-6baebdb612ff",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 56,
+          "sha256": "525a50ce4ee9fe96b84fd7eea60f51a88d130ed2083d6b29dd0eac3c58dd8382",
+          "score": -9.933971456760807,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-direct-01",
+      "category": "direct",
+      "document_id": "ssdf",
+      "mode": "lexical",
+      "first_relevant_rank": 2,
+      "matched_pages": [
+        16
+      ],
+      "designated_pages": [
+        16
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.736,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "0352e62d-2eda-5b52-9176-7d2ce7dd1bc1",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 18,
+          "sha256": "b75a5f13d89c5a7f7c4504d8c06b8d1dced126f42a7b6bef54ffeb1f0c2caf1b",
+          "score": -18.833648517819174,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "05522311-09e4-5ff9-bbeb-71778dc64981",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 16,
+          "sha256": "f5c6615732fec608dddd99b92631acef91ce43f2a18ed8025ce87d28fd41e2a7",
+          "score": -14.947740043629056,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "bc899e18-1bbc-5ad4-a2b8-dc88b4f8faa8",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 23,
+          "sha256": "3d7be853dddde10f4e68b6088509f250858d7fed414df73de5d2435b895f211d",
+          "score": -11.932532721043883,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "7eacdf57-3521-511d-b496-11d3f6541d31",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 16,
+          "sha256": "713e308eab57425e8ccc9b3b8ad0490009806bfd711e9b5109189ff078797183",
+          "score": -10.18622485936137,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "262be4fc-828e-5639-ae31-f59dae619ae7",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 16,
+          "sha256": "6eae31f690f3e9227a1cbaca23213e35ee45da3da4f071915d78141a724de630",
+          "score": -9.551092263090384,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-direct-02",
+      "category": "direct",
+      "document_id": "ssdf",
+      "mode": "lexical",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        15
+      ],
+      "designated_pages": [
+        15
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.574,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "4dcef768-279d-5db2-8259-5d6b0e29fc7d",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 15,
+          "sha256": "eb7b7384e3f6369cc78558c438e1d25f6fb2769718303795fe53a94e2e9301bf",
+          "score": -11.100668424565255,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "88f4bbdb-7337-5a67-a6c4-849e5897f5b3",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 15,
+          "sha256": "c400ad3b1ef0b1a0b2c838ce435dc69b96ec5df27700aa2f6d8c4fba238f8a91",
+          "score": -10.484739807676695,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "f1420631-613e-5a14-a9d7-fb128854a689",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 6,
+          "sha256": "acdfc5fd61c9469b19de93a3e3f80d81afa9abff22b70837125b56031acfc1bd",
+          "score": -6.9553739066677895,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "0023740f-99f5-56a3-8e81-7632aa9a25ce",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 10,
+          "sha256": "3c77fe895ff49a97c0e591f64d67274793475c090f6d1f89c4a4c1f5af365fd8",
+          "score": -6.737121209470879,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "1eaea749-e8e6-5223-865a-011e7370d8f7",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 28,
+          "sha256": "1e6888c1ef3027482a93877d860153530509c9c39398ee5e793ca14211ed0959",
+          "score": -6.619580373733533,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-direct-03",
+      "category": "direct",
+      "document_id": "ssdf",
+      "mode": "lexical",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        25
+      ],
+      "designated_pages": [
+        25
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.704,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "20a47c88-a975-5a99-b91c-b5746a31121f",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 25,
+          "sha256": "b99fb6af5a5dae8f6fa2dffaa1228cf00712a40cf3fbab578c93bea8601a4e89",
+          "score": -13.358092125224342,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "9e699273-7a31-53c3-b878-7c0f335f1fc3",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 12,
+          "sha256": "89994da69feafc91370b7913b992d67fea03b23f1394bcd00f4a41ea706e1a6d",
+          "score": -9.28302920598039,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "1fc30e2d-09db-58c2-9fc6-b683a1665e0f",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 26,
+          "sha256": "b7b7659aa229d3e34a5de45bca574643b97a55dc6313ee620a2f0ea222319d52",
+          "score": -9.025812181416867,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "0fc737ff-3359-557e-8714-670730ba5a24",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 14,
+          "sha256": "5a8dc2a256055067a8bbcab5a741dad5d23d8ed7597dbbe32731e9ac7a5035ca",
+          "score": -8.43705479237826,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "51e470ad-f6ab-563b-ac5d-b9473544c251",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 17,
+          "sha256": "91ccdcd6f987ce70e87d3ec54076324fef0508b0a81ce00bfbe703ee822764c8",
+          "score": -8.42194457908287,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-procedural-01",
+      "category": "procedural",
+      "document_id": "ssdf",
+      "mode": "lexical",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        18
+      ],
+      "designated_pages": [
+        18
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.608,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "0352e62d-2eda-5b52-9176-7d2ce7dd1bc1",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 18,
+          "sha256": "b75a5f13d89c5a7f7c4504d8c06b8d1dced126f42a7b6bef54ffeb1f0c2caf1b",
+          "score": -12.769944321638633,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "aa8a14e9-9e9a-5972-9b4a-0df07ae15150",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 18,
+          "sha256": "3d50e875983d1190e54f0c79751e57cbcff327a8cf3a24dd2f40f50ad15e7899",
+          "score": -11.849385698340683,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "ae9b8caa-a7d9-5fce-9b50-e8f585202552",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 20,
+          "sha256": "5772c961e7fdb35789ece781d84ff5fe307fc2dde80474036e804a7ef641fbe9",
+          "score": -5.5852632813889755,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "bc899e18-1bbc-5ad4-a2b8-dc88b4f8faa8",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 23,
+          "sha256": "3d7be853dddde10f4e68b6088509f250858d7fed414df73de5d2435b895f211d",
+          "score": -5.349682418664241,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "9892427a-fe7d-5960-a21f-a68357270a91",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 11,
+          "sha256": "c2deeb8707120e8c624d6ec1c89d15a91fc44e1712cb60c71822a7a26c99f7e3",
+          "score": -4.969022924930275,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-procedural-02",
+      "category": "procedural",
+      "document_id": "ssdf",
+      "mode": "lexical",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        22
+      ],
+      "designated_pages": [
+        22
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.611,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "6e593e60-865c-5014-9275-724876a17608",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 22,
+          "sha256": "5dd9b8c723fe3f784cffdb29eaa62f764e1f199e65f5a01b1f8240e36bda095b",
+          "score": -13.235745785554665,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "353facad-d416-5ce4-a0bf-7ba775bc21ba",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 26,
+          "sha256": "85ece52e6535498928e64538e6208591ff7afda7d4a92689c3d14ab0352fe2d3",
+          "score": -12.560985081869413,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "ce88193b-e339-524c-92da-2a182e9fab41",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 14,
+          "sha256": "388361d938393230bae9c39a6d05bbd44f87a4de3b56b9bdfd5f0e9962d89b26",
+          "score": -10.772577947395254,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "0fc737ff-3359-557e-8714-670730ba5a24",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 14,
+          "sha256": "5a8dc2a256055067a8bbcab5a741dad5d23d8ed7597dbbe32731e9ac7a5035ca",
+          "score": -10.582333092722568,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "e18b9061-587a-5e18-859b-85340a3da9de",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 17,
+          "sha256": "9f226abc734d02b68c3be3f3b765ee8d97d1b55d0bf68ceea51d166867687d1a",
+          "score": -9.197196711605681,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-procedural-03",
+      "category": "procedural",
+      "document_id": "ssdf",
+      "mode": "lexical",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        27
+      ],
+      "designated_pages": [
+        27
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.264,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "afa77bf8-8682-53ed-8217-87e2c6c1c4f7",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 27,
+          "sha256": "052c6552bc843ee1a4ff58a4aaddc08550c160f9737027323577a6ee4aa6c122",
+          "score": -16.246721686451114,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "9e699273-7a31-53c3-b878-7c0f335f1fc3",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 12,
+          "sha256": "89994da69feafc91370b7913b992d67fea03b23f1394bcd00f4a41ea706e1a6d",
+          "score": -9.329552416122569,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "20a47c88-a975-5a99-b91c-b5746a31121f",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 25,
+          "sha256": "b99fb6af5a5dae8f6fa2dffaa1228cf00712a40cf3fbab578c93bea8601a4e89",
+          "score": -6.907550526798816,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "32511b36-8b65-59f0-971f-7f82edeceb9c",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 30,
+          "sha256": "8d79ce72b9188039e0d87f88336a1f8196b0fe2b4c41c1070d658795ce70bd75",
+          "score": -6.329498319977369,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "9cf8ae80-627b-5e34-96ca-5fd8d5d6b3a5",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 29,
+          "sha256": "ee2a17050c797c987a717711e4f5055057f245899a4f4d1dab4889c78861d489",
+          "score": -6.127001373061673,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-nearby-01",
+      "category": "nearby",
+      "document_id": "ssdf",
+      "mode": "lexical",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        19
+      ],
+      "designated_pages": [
+        19
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.656,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "84a263cd-9200-53c3-8721-55fe21ce10a8",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 19,
+          "sha256": "351c19d9a2dfd20b7ec021b9d0b4c0cb2db60f9e49f64ddc4c673c6daee5e81b",
+          "score": -20.004501139393447,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "4e07060b-96cd-5673-82f3-6f5d8ad46267",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 19,
+          "sha256": "3c1c97c4550cee590c0671fda5ca84f61b91669a89e35a9ebb4d6c142834bef9",
+          "score": -15.890500127401681,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "1ac4feb7-fa64-5df3-8b01-3a3a636a133c",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 44,
+          "sha256": "cb1cd2e61e5c7ffa5218ff69102e91a57d600442efdf77510bd36227c129453c",
+          "score": -11.39585713101616,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "fea5597f-e977-5d52-aec7-449ca3496039",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 3,
+          "sha256": "bf37da7cbb68addeb19ee73878f6175f2dce2e323621d71d3d326105f86422f0",
+          "score": -10.472368728255177,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "6dd49a8c-e96a-50d5-8260-5e0ba7fe3e66",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 34,
+          "sha256": "34af6ba060b27d7de04fa6f3b9a37bec841e7e6e034b04f9dea6cdbc3652d165",
+          "score": -9.491216019090755,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-nearby-02",
+      "category": "nearby",
+      "document_id": "ssdf",
+      "mode": "lexical",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        23
+      ],
+      "designated_pages": [
+        23
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.402,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "8479ca7e-69ac-5a41-8c60-494df805ad1e",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 23,
+          "sha256": "b86849679cd29637fdf9fd3b954f1cd48af153fbcf054b73ec39888e1153497c",
+          "score": -14.237005763155299,
+          "lexical_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "4ccdb338-38bc-5594-b35e-240e6fa6960d",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 24,
+          "sha256": "2dd637c6f02d3738b2b41e3f2ac70d5fe76f3b8305cdcbcca75cbfd6060f0464",
+          "score": -14.133796618910816,
+          "lexical_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "b1247a2d-bd15-51b3-832f-f08b2c188da8",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 23,
+          "sha256": "4ec5d9324582433076f87291c536c325becbcd7385f79137c300b563ae339b71",
+          "score": -13.012600389336127,
+          "lexical_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "88609870-01c8-5658-a18c-47fa32fd9b99",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 22,
+          "sha256": "429feff1b881e8843c5b1796cfdd1bac6ec46375f45d9c1eb79423eae0a64ed9",
+          "score": -11.186903169396622,
+          "lexical_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "35d6480c-f9a8-50d3-8583-1e649ac6c627",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 18,
+          "sha256": "15cd34ff8515052e7bed796f55e3b722092182187ab1287cd9092c1a012a040d",
+          "score": -9.14478461187269,
+          "lexical_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-direct-01",
+      "category": "direct",
+      "document_id": "ai-rmf",
+      "mode": "latent",
+      "first_relevant_rank": 4,
+      "matched_pages": [
+        19
+      ],
+      "designated_pages": [
+        19
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 89.203,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "1bfe5e1f-8b80-5ddc-9c36-2800b355019a",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 47,
+          "sha256": "1bb237aeafe5d60cc3a66ff1d989d622770694665fd4695f2db32d0738f97929",
+          "score": 0.7697356588013625,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "ce81d2a6-1a83-5647-9ac5-8f7e26362eab",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 24,
+          "sha256": "e92be4c42380b21589b5952af67e960aca5fc0d7016f133dc1d880c96188ad90",
+          "score": 0.6584330686714699,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "03d97d51-f243-5efd-b587-c036cc6ebedc",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 11,
+          "sha256": "1bba5ba84b539fac8bb5730c00ca90b3334021362b9aa74f748a7dc407b620ea",
+          "score": 0.6490595472959454,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "729c75ca-6194-5ebf-988e-ab6bb9ad9dab",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 19,
+          "sha256": "df079fa1db3dd72bb1bc8a359c87726c720d0a48ddf12184c2980ee277970716",
+          "score": 0.6188295543933657,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "8e35eadb-35db-5b6e-a30b-a356062952e6",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 14,
+          "sha256": "97add246f09b79f4bdc497c34c172a4282d83713881ace08dd0e71a26608acc4",
+          "score": 0.6186246224262006,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-direct-02",
+      "category": "direct",
+      "document_id": "ai-rmf",
+      "mode": "latent",
+      "first_relevant_rank": null,
+      "matched_pages": [],
+      "designated_pages": [
+        23
+      ],
+      "designated_page_recall": 0.0,
+      "took_ms": 2.954,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "1bfe5e1f-8b80-5ddc-9c36-2800b355019a",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 47,
+          "sha256": "1bb237aeafe5d60cc3a66ff1d989d622770694665fd4695f2db32d0738f97929",
+          "score": 0.7810859826772922,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "ce81d2a6-1a83-5647-9ac5-8f7e26362eab",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 24,
+          "sha256": "e92be4c42380b21589b5952af67e960aca5fc0d7016f133dc1d880c96188ad90",
+          "score": 0.7008603682923381,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "620ce7a1-d6d6-59de-a3be-bc19aa2b1d2a",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 26,
+          "sha256": "ca85e89d290b3da506f1e280b6381777a587ed8c5953def61a3d0ada8e3d5524",
+          "score": 0.6932320825896814,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "82dc0fed-4bcf-558e-8ea1-8ec646844460",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 38,
+          "sha256": "a6fc3ddab0bfe41dd7b393fa9ee92ca2d10b272e2d14b860edfbaa34c0fdb304",
+          "score": 0.6876784669322108,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "6ea8b3c4-a82d-52b8-b122-8085258ed592",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 8,
+          "sha256": "b975b2f12e8747d6a1d2d0795daeb13ca210f60436ce55301b81a723698a736f",
+          "score": 0.6690755268504459,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-direct-03",
+      "category": "direct",
+      "document_id": "ai-rmf",
+      "mode": "latent",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        22
+      ],
+      "designated_pages": [
+        22
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.743,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "aafc5b98-213b-5e9c-971a-67eb9edffcc1",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 22,
+          "sha256": "6f0174a85f12d7dc91734d43cb2478bc26082f12fed70381d1e41fc06fb9f52b",
+          "score": 0.6948642348945969,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "dfc72049-31c5-5c97-9bab-508c40e4061d",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 46,
+          "sha256": "025cf99396fac5685c7fd030e9b03697dd1a352fd05607763c5445005ee5485b",
+          "score": 0.6547663364745336,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "0ea8a23a-f63d-5c7a-bf5b-0a91bfedd82d",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 44,
+          "sha256": "60b702c9a35597b87cf3a6d1b780031bba6cc0c745e66072c82c433febfe492b",
+          "score": 0.630541342136336,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "51c007da-a7bd-5e1f-abde-c90f80877629",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 41,
+          "sha256": "3a9aa17a6edb79bcd86ba2ee2dd89af336dd30743b0b5ee242cd77d72427c0a6",
+          "score": 0.6159796430644181,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "503ac9d8-7d2c-5026-a707-7c408e459759",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 40,
+          "sha256": "045c650ffce46029f667c49188cdba5df48442a2fc2062d46b784999dcf3872a",
+          "score": 0.5826385324761956,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-procedural-01",
+      "category": "procedural",
+      "document_id": "ai-rmf",
+      "mode": "latent",
+      "first_relevant_rank": null,
+      "matched_pages": [],
+      "designated_pages": [
+        29
+      ],
+      "designated_page_recall": 0.0,
+      "took_ms": 2.695,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "0251cd8e-fa2f-5d7d-b0b9-1f982ad28afa",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 10,
+          "sha256": "ba3a59faebdd8b2a0ac4cd2d38ab6d3dfadb08e91d5939a5563cab23cb129d1b",
+          "score": 0.7011452274771283,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "ba17376d-60f8-5eff-bf94-71e196ca0e01",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 13,
+          "sha256": "f7fe24ca5f1562563ce72817fcefeeab546fcf95a7f1655f173accc6fd20ac4c",
+          "score": 0.5961183083691023,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "f25b685e-d794-5348-86e2-ba6a73470dbc",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 52,
+          "sha256": "3a4282ae09b4e39bed65ef38df458859a7f2cf4883970f1d3bb2d8395f1d877c",
+          "score": 0.587985193217892,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "7d46efc4-04fb-5078-a125-a613a10953a7",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 52,
+          "sha256": "7d962411a3595fa670f4c32aac3698619cfe58ee090cf63d8bfcc46cce0c0c0f",
+          "score": 0.5630469272674976,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "9d1e5cc9-ca53-5f7c-b589-618dd9f2c9e1",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 43,
+          "sha256": "e924bf520ed1f49a23c5d57186b6d058665ab4b464de43b37ed7428017beb43d",
+          "score": 0.5431962129483393,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-procedural-02",
+      "category": "procedural",
+      "document_id": "ai-rmf",
+      "mode": "latent",
+      "first_relevant_rank": 5,
+      "matched_pages": [
+        36
+      ],
+      "designated_pages": [
+        36
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.142,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "c25d5629-c821-511f-8237-055a602db874",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 43,
+          "sha256": "b0816066f182212e041d0e131e0d424c852107a63fdb2858147c954da2124fde",
+          "score": 0.6388559520436888,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "fd292160-1a7f-5cee-9b26-946eae9b3afe",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 42,
+          "sha256": "56c3ba91c92722887b7a7e62ccf317048876a138ef68c69a193a6a7637501f61",
+          "score": 0.6091457578082351,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "8a6b4928-29f5-5ba8-8a6a-3096f9c88c9a",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 40,
+          "sha256": "5cb5fb0e2961bb72fbd0014eb8a8a29a1c7cc039b5c547828a2cf59624ca7ba5",
+          "score": 0.6035430108238613,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "fff5cc22-a099-5445-a432-4d5cc2e2511c",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 49,
+          "sha256": "01c89ab050d1bc809d9e1c2a24c8ade26efd15cab1232d8ab1841e83e22a2473",
+          "score": 0.6030334716604117,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "79135ae7-bf45-5fa9-a54d-991ee87d8768",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 36,
+          "sha256": "8228c8c05bf0f3eb612e386b6c6ad909cad1cb0215352f50d576e2e2d9199f29",
+          "score": 0.5733928266823707,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-procedural-03",
+      "category": "procedural",
+      "document_id": "ai-rmf",
+      "mode": "latent",
+      "first_relevant_rank": null,
+      "matched_pages": [],
+      "designated_pages": [
+        37
+      ],
+      "designated_page_recall": 0.0,
+      "took_ms": 2.047,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "fd292160-1a7f-5cee-9b26-946eae9b3afe",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 42,
+          "sha256": "56c3ba91c92722887b7a7e62ccf317048876a138ef68c69a193a6a7637501f61",
+          "score": 0.620925702887861,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "000e365e-540e-5cf7-952e-d2c63a5c5d39",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 7,
+          "sha256": "d63527b3f14eeb8604db0a202a80cebf215bd1fd160a818802f240a5f88f74c0",
+          "score": 0.577949691000402,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "1bfe5e1f-8b80-5ddc-9c36-2800b355019a",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 47,
+          "sha256": "1bb237aeafe5d60cc3a66ff1d989d622770694665fd4695f2db32d0738f97929",
+          "score": 0.5611756476350416,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "30d8549b-d8a0-5dd9-8176-5c6100056116",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 6,
+          "sha256": "10dbf427f57239dfb8f8181ca56a5922e295982e1d38945a2e2f0b9c2eb84af4",
+          "score": 0.5556461661394747,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "7f0b508f-a2e8-5c30-8d75-1da8d62b78dd",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 30,
+          "sha256": "c0dd51b11aa7233e30f3ee5f99851d762f0c7868205a6fd22abdca5cee52f8e7",
+          "score": 0.5498317142315408,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-nearby-01",
+      "category": "nearby",
+      "document_id": "ai-rmf",
+      "mode": "latent",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        21
+      ],
+      "designated_pages": [
+        21
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.315,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "1614f111-3e54-5e83-951c-569cd9786fd0",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 21,
+          "sha256": "937b6b78006a2bd27ae3dbcf72dedd433f8e401349d8814c444eb9bce2c0978f",
+          "score": 0.682285118107911,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "1bfe5e1f-8b80-5ddc-9c36-2800b355019a",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 47,
+          "sha256": "1bb237aeafe5d60cc3a66ff1d989d622770694665fd4695f2db32d0738f97929",
+          "score": 0.6794981536853169,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "ce81d2a6-1a83-5647-9ac5-8f7e26362eab",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 24,
+          "sha256": "e92be4c42380b21589b5952af67e960aca5fc0d7016f133dc1d880c96188ad90",
+          "score": 0.6278455989743665,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "aafc5b98-213b-5e9c-971a-67eb9edffcc1",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 22,
+          "sha256": "6f0174a85f12d7dc91734d43cb2478bc26082f12fed70381d1e41fc06fb9f52b",
+          "score": 0.621772485720981,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "d6461d0a-4a83-5e78-89d2-eda10c89103c",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 21,
+          "sha256": "127850cac2f7a3776d698cb9f5ea4bad30596cb957b5dc3710aaedeacc9bcd4e",
+          "score": 0.5744781583457306,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-nearby-02",
+      "category": "nearby",
+      "document_id": "ai-rmf",
+      "mode": "latent",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        38
+      ],
+      "designated_pages": [
+        38
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.723,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "a0e0a643-6398-53b9-bdb5-895b0017c8c3",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 38,
+          "sha256": "f3f59785ebc6e1a791a0a93b49cd0af5fe20bead3e8e5d3d86aedf48cec156c3",
+          "score": 0.8063443974058342,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "82dc0fed-4bcf-558e-8ea1-8ec646844460",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 38,
+          "sha256": "a6fc3ddab0bfe41dd7b393fa9ee92ca2d10b272e2d14b860edfbaa34c0fdb304",
+          "score": 0.682059443021644,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "6823057e-ec09-5653-b113-3c24838a18a3",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 5,
+          "sha256": "ec6a51158dc6a75bf653bcdd13cd147bd9d95a1a3e65f3baa9a80fa59e3beb66",
+          "score": 0.6567660643161378,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "1bfe5e1f-8b80-5ddc-9c36-2800b355019a",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 47,
+          "sha256": "1bb237aeafe5d60cc3a66ff1d989d622770694665fd4695f2db32d0738f97929",
+          "score": 0.6470216392341119,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "715719d9-39bb-5f90-ab1e-244e6744b27d",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 1,
+          "sha256": "ba1514d53a602445079e56137c31cb388bfe52b274fb955cbb9f6250e2ebeefc",
+          "score": 0.6285440195615848,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-direct-01",
+      "category": "direct",
+      "document_id": "genai-profile",
+      "mode": "latent",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        12
+      ],
+      "designated_pages": [
+        12
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 3.391,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "a2075a1c-b805-5d80-bd0a-36644e82fd1b",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 12,
+          "sha256": "1b7f20cc087c73abb05504b5f474c4c2c21ab5180f97bd1e5c59752e1dbf3ce4",
+          "score": 0.7637983695878123,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "33903c96-6403-5eb8-b864-f6f69478bd5e",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 41,
+          "sha256": "05d37f6c46d9b9338dc258c96b96230ff1d674b15301894e1d2a137eda993252",
+          "score": 0.5931707337674745,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "774284bf-f6fa-5dbf-83fe-8f7b545b575e",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 13,
+          "sha256": "ba9172fc70f7d7578f076177ba011a35a0f9cec7625d44b8b16b714d6c19ab9c",
+          "score": 0.4709479221586265,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "2985589a-958b-58a0-9f46-5c01520caec4",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 5,
+          "sha256": "f73125cff0dc292adbba2370fbbb3358bb43a172f6419475eec2084c3805a054",
+          "score": 0.43048309973375654,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "6823057e-ec09-5653-b113-3c24838a18a3",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 5,
+          "sha256": "ec6a51158dc6a75bf653bcdd13cd147bd9d95a1a3e65f3baa9a80fa59e3beb66",
+          "score": 0.42531760545649916,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-direct-02",
+      "category": "direct",
+      "document_id": "genai-profile",
+      "mode": "latent",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        55
+      ],
+      "designated_pages": [
+        55
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 3.609,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "9889ab44-002c-55fe-b37a-23a370ab4c2f",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "7f32d902e8742ee5f56166adba8fb7b7c839be25fd02e340d09259912fcaa74d",
+          "score": 0.8434942702379888,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "9f867f4b-ed6a-50ed-9d4f-cffddb9f985d",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "353a03a5105e7bfe19c6c3e92cc8e58cec53cc0eccaf26c7e05d18d1de15871f",
+          "score": 0.698515121551223,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "edf7a562-b6db-5ba2-a59b-6baebdb612ff",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 56,
+          "sha256": "525a50ce4ee9fe96b84fd7eea60f51a88d130ed2083d6b29dd0eac3c58dd8382",
+          "score": 0.6982708291553935,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "399eb6eb-6cc6-5105-a5d1-28289bce2886",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "6088f56eef833110cd8ec44cefb0123af40d0ffbb31c5a0b7e1933e6d002a48c",
+          "score": 0.6806258435048023,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "b1abad45-7b40-597c-8139-340eae550d89",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 44,
+          "sha256": "507f0163092e75863c824747fdad046452f2b7ddec3b0536ad661fa3e1c14662",
+          "score": 0.6204214717377581,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-direct-03",
+      "category": "direct",
+      "document_id": "genai-profile",
+      "mode": "latent",
+      "first_relevant_rank": null,
+      "matched_pages": [],
+      "designated_pages": [
+        15
+      ],
+      "designated_page_recall": 0.0,
+      "took_ms": 2.234,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "715719d9-39bb-5f90-ab1e-244e6744b27d",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 1,
+          "sha256": "ba1514d53a602445079e56137c31cb388bfe52b274fb955cbb9f6250e2ebeefc",
+          "score": 0.5560348734418246,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "9d1e5cc9-ca53-5f7c-b589-618dd9f2c9e1",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 43,
+          "sha256": "e924bf520ed1f49a23c5d57186b6d058665ab4b464de43b37ed7428017beb43d",
+          "score": 0.5526387408998255,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "6823057e-ec09-5653-b113-3c24838a18a3",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 5,
+          "sha256": "ec6a51158dc6a75bf653bcdd13cd147bd9d95a1a3e65f3baa9a80fa59e3beb66",
+          "score": 0.5425987881818226,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "2985589a-958b-58a0-9f46-5c01520caec4",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 5,
+          "sha256": "f73125cff0dc292adbba2370fbbb3358bb43a172f6419475eec2084c3805a054",
+          "score": 0.5287639288937909,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "89b99f3e-7ae0-5039-9a88-3a03d3899082",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 1,
+          "sha256": "813aa78fdac2f43cd54403e795c86d650fd99461f6f2917f407e51e8c9755a78",
+          "score": 0.5206586545486775,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-procedural-01",
+      "category": "procedural",
+      "document_id": "genai-profile",
+      "mode": "latent",
+      "first_relevant_rank": null,
+      "matched_pages": [],
+      "designated_pages": [
+        21
+      ],
+      "designated_page_recall": 0.0,
+      "took_ms": 1.848,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "d2c12bf4-b063-5a6c-815b-eb9c8f0384f0",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 44,
+          "sha256": "8165754493d8ea36010c70859d68831ea34504c62297ff8a4c48186a0fbfbcb3",
+          "score": 0.6532633469109166,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "9d1e5cc9-ca53-5f7c-b589-618dd9f2c9e1",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 43,
+          "sha256": "e924bf520ed1f49a23c5d57186b6d058665ab4b464de43b37ed7428017beb43d",
+          "score": 0.5310733714826905,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "0ea8a23a-f63d-5c7a-bf5b-0a91bfedd82d",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 44,
+          "sha256": "60b702c9a35597b87cf3a6d1b780031bba6cc0c745e66072c82c433febfe492b",
+          "score": 0.5069005627057508,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "53b35a3c-c986-5eaa-ae75-48fcd67c83ed",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 28,
+          "sha256": "1b133a10e61b25aaadd753f653ec6838fde4354b37a10c3a04055e90173cacef",
+          "score": 0.49577907193207743,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "2ded1f8c-4085-57a8-b602-59cccb187f69",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 14,
+          "sha256": "4e8dd031c7f88b3d2db39c4653e4d2c05f5b24f6224d5912e665152f7a957875",
+          "score": 0.4938418803102161,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-procedural-02",
+      "category": "procedural",
+      "document_id": "genai-profile",
+      "mode": "latent",
+      "first_relevant_rank": null,
+      "matched_pages": [],
+      "designated_pages": [
+        25
+      ],
+      "designated_page_recall": 0.0,
+      "took_ms": 1.859,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "9889ab44-002c-55fe-b37a-23a370ab4c2f",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "7f32d902e8742ee5f56166adba8fb7b7c839be25fd02e340d09259912fcaa74d",
+          "score": 0.7633837168632938,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "9f867f4b-ed6a-50ed-9d4f-cffddb9f985d",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "353a03a5105e7bfe19c6c3e92cc8e58cec53cc0eccaf26c7e05d18d1de15871f",
+          "score": 0.6725880204469117,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "edf7a562-b6db-5ba2-a59b-6baebdb612ff",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 56,
+          "sha256": "525a50ce4ee9fe96b84fd7eea60f51a88d130ed2083d6b29dd0eac3c58dd8382",
+          "score": 0.6685698126140501,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "399eb6eb-6cc6-5105-a5d1-28289bce2886",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "6088f56eef833110cd8ec44cefb0123af40d0ffbb31c5a0b7e1933e6d002a48c",
+          "score": 0.643950647087016,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "b1abad45-7b40-597c-8139-340eae550d89",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 44,
+          "sha256": "507f0163092e75863c824747fdad046452f2b7ddec3b0536ad661fa3e1c14662",
+          "score": 0.607882259376963,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-procedural-03",
+      "category": "procedural",
+      "document_id": "genai-profile",
+      "mode": "latent",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        57
+      ],
+      "designated_pages": [
+        57
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.007,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "e9e69c6d-09eb-5d16-a3ec-dcf460f1db06",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 57,
+          "sha256": "5c761166dfeb147bed9f3bd7e21d76c6bd328e107b60921345a2a8fe581ae657",
+          "score": 0.7475295062926586,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "c1ed7b6c-756f-5588-8d13-80ee62b4d989",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 46,
+          "sha256": "34ab058b4466efd0252ed886483ed6e7c20bd904b2f293d9d0a30b64143a786a",
+          "score": 0.581034423137142,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "5f297321-1e43-57db-8478-ad7b9dddfe0b",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 49,
+          "sha256": "0b117ac8747b8c7219389f238afd44ec5148656a010b6318807e6b0772488a7c",
+          "score": 0.5104965067912439,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "a048c841-2e32-5e43-bec8-e8eec7a0c7b3",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 56,
+          "sha256": "c88c5bf530f7c136f2e2971b5de1de6c21e8689a0542065a12463750fea5016d",
+          "score": 0.5037427143898162,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "8cec9d85-59d6-51d9-8dfc-c00a195e2647",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 29,
+          "sha256": "1e258b839abdd5762f6eaeafa59fc2f3c4c524992748efdefc758d788a41e185",
+          "score": 0.4699473857290548,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-nearby-01",
+      "category": "nearby",
+      "document_id": "genai-profile",
+      "mode": "latent",
+      "first_relevant_rank": 2,
+      "matched_pages": [
+        15
+      ],
+      "designated_pages": [
+        15
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.013,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "4cc958c4-28dd-5a84-a5ca-7b3b79852347",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 14,
+          "sha256": "5e4be412c579721c4d2e2421c3fe086df647de1f162a499984fd40827cc207b0",
+          "score": 0.5273666407286037,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "feb6e26e-e674-5fa6-9ba9-92fff081c961",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 15,
+          "sha256": "d7b1e2aaf12a76cf81f1c9e5f9805c71f95774071cba8a8c21690dfa57423bc5",
+          "score": 0.5220210612298554,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "0cd452f4-08a3-5e1c-8e1c-4fb06d7e98a4",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 14,
+          "sha256": "1b1fe9d751fa088d002d2697b62d77c103a40f6bf5728401a580504dac6d5f15",
+          "score": 0.47657365996004686,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "ba17376d-60f8-5eff-bf94-71e196ca0e01",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 13,
+          "sha256": "f7fe24ca5f1562563ce72817fcefeeab546fcf95a7f1655f173accc6fd20ac4c",
+          "score": 0.4741803715185027,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "9d1e5cc9-ca53-5f7c-b589-618dd9f2c9e1",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 43,
+          "sha256": "e924bf520ed1f49a23c5d57186b6d058665ab4b464de43b37ed7428017beb43d",
+          "score": 0.4536515689221696,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-nearby-02",
+      "category": "nearby",
+      "document_id": "genai-profile",
+      "mode": "latent",
+      "first_relevant_rank": 4,
+      "matched_pages": [
+        53
+      ],
+      "designated_pages": [
+        53
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.922,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "b9594dec-e97b-5b40-a78a-5750a1c1f566",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 54,
+          "sha256": "3a6a84a90c57ff3d5e47739657c79a0a199c66700b4d8bd3a3b6fe9abe0eeafc",
+          "score": 0.9128763148029633,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "7209cbf8-3086-5590-bfaf-189eb0b33f36",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 54,
+          "sha256": "cf65d8f2dee745eb050c15a9e34dd6974b7cf1c228f6c5d32964215ba08a5fc9",
+          "score": 0.8140296698083025,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "73c1294f-e820-5062-b676-3afd1fd99065",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 54,
+          "sha256": "8a302a162e69e5a3de144505adf622c5c2fdfee200e2ff0c2212189b56f71c87",
+          "score": 0.6476080109912377,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "7964b219-dbe4-5d9f-ba80-0d959207ca76",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 53,
+          "sha256": "36133c65ac68654fc81aa7e2ec3c006d065f254cec8566b72d3a7a344f230fca",
+          "score": 0.4654633390857262,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "9f867f4b-ed6a-50ed-9d4f-cffddb9f985d",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "353a03a5105e7bfe19c6c3e92cc8e58cec53cc0eccaf26c7e05d18d1de15871f",
+          "score": 0.4617097256201955,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-direct-01",
+      "category": "direct",
+      "document_id": "ssdf",
+      "mode": "latent",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        16
+      ],
+      "designated_pages": [
+        16
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.21,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "262be4fc-828e-5639-ae31-f59dae619ae7",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 16,
+          "sha256": "6eae31f690f3e9227a1cbaca23213e35ee45da3da4f071915d78141a724de630",
+          "score": 0.6193352570696059,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "eb8d0656-cb9f-5974-8238-82d282e20f13",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 33,
+          "sha256": "abf86d13af3cae9bfa2cf1cfd8a2421dd6d0b1533980fdf43a6106fd6d30a07a",
+          "score": 0.6142494552472961,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "a83b46d4-fcac-54d3-8001-91ba6ce71965",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 33,
+          "sha256": "8b6da0856031cfdecb95267c9dae167dc3a4d2dad8a2cc735ec0920c964958f7",
+          "score": 0.5505200595296691,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "0352e62d-2eda-5b52-9176-7d2ce7dd1bc1",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 18,
+          "sha256": "b75a5f13d89c5a7f7c4504d8c06b8d1dced126f42a7b6bef54ffeb1f0c2caf1b",
+          "score": 0.5500683015895191,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "4e46bc7c-acf3-5998-9eb0-e8558edba83d",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 11,
+          "sha256": "b0b08b4b054da751bf9d5bf7aefe2f88e38fd9e1712ade3e40055a4161796cda",
+          "score": 0.5347586455523504,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-direct-02",
+      "category": "direct",
+      "document_id": "ssdf",
+      "mode": "latent",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        15
+      ],
+      "designated_pages": [
+        15
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.886,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "4dcef768-279d-5db2-8259-5d6b0e29fc7d",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 15,
+          "sha256": "eb7b7384e3f6369cc78558c438e1d25f6fb2769718303795fe53a94e2e9301bf",
+          "score": 0.6487441754922658,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "262be4fc-828e-5639-ae31-f59dae619ae7",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 16,
+          "sha256": "6eae31f690f3e9227a1cbaca23213e35ee45da3da4f071915d78141a724de630",
+          "score": 0.643182204582238,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "6ab462ac-bbd2-59bb-b1aa-11513938d653",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 8,
+          "sha256": "403ccfc1b9c60b0998fbe5f20b440e2d4a62b93f42c1a9a53ffc067f5ceb7f64",
+          "score": 0.583975848336804,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "4e46bc7c-acf3-5998-9eb0-e8558edba83d",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 11,
+          "sha256": "b0b08b4b054da751bf9d5bf7aefe2f88e38fd9e1712ade3e40055a4161796cda",
+          "score": 0.5839434114088864,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "88f4bbdb-7337-5a67-a6c4-849e5897f5b3",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 15,
+          "sha256": "c400ad3b1ef0b1a0b2c838ce435dc69b96ec5df27700aa2f6d8c4fba238f8a91",
+          "score": 0.5729930211281207,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-direct-03",
+      "category": "direct",
+      "document_id": "ssdf",
+      "mode": "latent",
+      "first_relevant_rank": 4,
+      "matched_pages": [
+        25
+      ],
+      "designated_pages": [
+        25
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.859,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "7e2c859c-0970-5d39-9ced-4a35387e1b98",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 4,
+          "sha256": "a9668f0b5aa1a15c8befb329ecfca4929d0b70d97eaef6438f0e9df4e614852c",
+          "score": 0.6790288849389059,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "12be847c-6d67-52fb-b4f7-2f8eb79048d9",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 10,
+          "sha256": "5c9f750fa9d4ed03049e8a9da0801f1fd752387bef8d215301475ed4065e9c9a",
+          "score": 0.5940069563811898,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "9e699273-7a31-53c3-b878-7c0f335f1fc3",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 12,
+          "sha256": "89994da69feafc91370b7913b992d67fea03b23f1394bcd00f4a41ea706e1a6d",
+          "score": 0.5880656967700004,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "20a47c88-a975-5a99-b91c-b5746a31121f",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 25,
+          "sha256": "b99fb6af5a5dae8f6fa2dffaa1228cf00712a40cf3fbab578c93bea8601a4e89",
+          "score": 0.5774187464120268,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "0fc737ff-3359-557e-8714-670730ba5a24",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 14,
+          "sha256": "5a8dc2a256055067a8bbcab5a741dad5d23d8ed7597dbbe32731e9ac7a5035ca",
+          "score": 0.5679087980551278,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-procedural-01",
+      "category": "procedural",
+      "document_id": "ssdf",
+      "mode": "latent",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        18
+      ],
+      "designated_pages": [
+        18
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.809,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "0352e62d-2eda-5b52-9176-7d2ce7dd1bc1",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 18,
+          "sha256": "b75a5f13d89c5a7f7c4504d8c06b8d1dced126f42a7b6bef54ffeb1f0c2caf1b",
+          "score": 0.8087231722686433,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "e18b9061-587a-5e18-859b-85340a3da9de",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 17,
+          "sha256": "9f226abc734d02b68c3be3f3b765ee8d97d1b55d0bf68ceea51d166867687d1a",
+          "score": 0.6673641625811706,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "aa8a14e9-9e9a-5972-9b4a-0df07ae15150",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 18,
+          "sha256": "3d50e875983d1190e54f0c79751e57cbcff327a8cf3a24dd2f40f50ad15e7899",
+          "score": 0.650345096810949,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "9022684a-a8ac-5373-91ef-f2b92f165091",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 13,
+          "sha256": "f7584ea34ce20a64f26997473301cb4f8f295bef14d760ff3dbc576254b2c888",
+          "score": 0.47512270144165397,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "35d6480c-f9a8-50d3-8583-1e649ac6c627",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 18,
+          "sha256": "15cd34ff8515052e7bed796f55e3b722092182187ab1287cd9092c1a012a040d",
+          "score": 0.3764046085213628,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-procedural-02",
+      "category": "procedural",
+      "document_id": "ssdf",
+      "mode": "latent",
+      "first_relevant_rank": null,
+      "matched_pages": [],
+      "designated_pages": [
+        22
+      ],
+      "designated_page_recall": 0.0,
+      "took_ms": 1.789,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "5639c3c1-104e-5bd0-b27e-a8c329b263ff",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 21,
+          "sha256": "4f10d0d7ac13c2f25945e562b0e7b805209c68d77c5a80388332ec1e9f5248f0",
+          "score": 0.6227077379249311,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "45bb6c0b-24f7-5755-9aa6-b3c337895633",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 14,
+          "sha256": "fc94f6cfdf47987bb25e8e5ac4dcb7c6fc4bc81d8015bf8e60b07e258f31d5fa",
+          "score": 0.5696924254251359,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "03e18902-4820-5114-8b2a-60c41fa9a4b8",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 21,
+          "sha256": "750c38c37ed6538b9eaeab7eb24ef324a0547311abf8273e3c15ed55c836eaa1",
+          "score": 0.5631521090791589,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "0fc737ff-3359-557e-8714-670730ba5a24",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 14,
+          "sha256": "5a8dc2a256055067a8bbcab5a741dad5d23d8ed7597dbbe32731e9ac7a5035ca",
+          "score": 0.5530527050647707,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "ccc6bd54-afac-5a74-9fa9-62dbc8ca99a7",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 21,
+          "sha256": "0c21b5643f1c89f80ce45d032618d63b246d39187eba8f85d7f2c3297286f292",
+          "score": 0.5449673820545783,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-procedural-03",
+      "category": "procedural",
+      "document_id": "ssdf",
+      "mode": "latent",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        27
+      ],
+      "designated_pages": [
+        27
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.811,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "afa77bf8-8682-53ed-8217-87e2c6c1c4f7",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 27,
+          "sha256": "052c6552bc843ee1a4ff58a4aaddc08550c160f9737027323577a6ee4aa6c122",
+          "score": 0.7779926067981684,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "a4aed932-d4b6-53a8-92b5-8453ab6052b0",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 26,
+          "sha256": "092cc3c2604401bba6970901cdc89bd149fb331f9f693218329b667ecadbfcff",
+          "score": 0.6068211222477992,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "9cf8ae80-627b-5e34-96ca-5fd8d5d6b3a5",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 29,
+          "sha256": "ee2a17050c797c987a717711e4f5055057f245899a4f4d1dab4889c78861d489",
+          "score": 0.5587202596026221,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "31f22f87-f970-585f-b1b9-c3ce03eec9df",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 25,
+          "sha256": "8d252adc113f33dca9f2065322c74c37affaa65f9a2b86aca6064b1c4bb1abc8",
+          "score": 0.5365085765066016,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "1fc30e2d-09db-58c2-9fc6-b683a1665e0f",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 26,
+          "sha256": "b7b7659aa229d3e34a5de45bca574643b97a55dc6313ee620a2f0ea222319d52",
+          "score": 0.5241046762284212,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-nearby-01",
+      "category": "nearby",
+      "document_id": "ssdf",
+      "mode": "latent",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        19
+      ],
+      "designated_pages": [
+        19
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.904,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "84a263cd-9200-53c3-8721-55fe21ce10a8",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 19,
+          "sha256": "351c19d9a2dfd20b7ec021b9d0b4c0cb2db60f9e49f64ddc4c673c6daee5e81b",
+          "score": 0.8259392196471382,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "4e07060b-96cd-5673-82f3-6f5d8ad46267",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 19,
+          "sha256": "3c1c97c4550cee590c0671fda5ca84f61b91669a89e35a9ebb4d6c142834bef9",
+          "score": 0.647212930165352,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "6e593e60-865c-5014-9275-724876a17608",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 22,
+          "sha256": "5dd9b8c723fe3f784cffdb29eaa62f764e1f199e65f5a01b1f8240e36bda095b",
+          "score": 0.4391624929485307,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "7ad4847f-d5c0-5cbf-a1a0-2fc240d16d28",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 19,
+          "sha256": "ecd593e0e2923bf12f0b30f9ebbb73133d1f75dd51e6663d8b9188147d16235d",
+          "score": 0.41722546168342156,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "53c902a0-bad6-5167-a536-ea4816cd55c0",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 21,
+          "sha256": "778a17b878484b8340555cfc4d8db657633cc6de4881382da3ccdf71c1313013",
+          "score": 0.38247591951635423,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-nearby-02",
+      "category": "nearby",
+      "document_id": "ssdf",
+      "mode": "latent",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        23
+      ],
+      "designated_pages": [
+        23
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 1.901,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "8479ca7e-69ac-5a41-8c60-494df805ad1e",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 23,
+          "sha256": "b86849679cd29637fdf9fd3b954f1cd48af153fbcf054b73ec39888e1153497c",
+          "score": 0.894445248364147,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "b1247a2d-bd15-51b3-832f-f08b2c188da8",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 23,
+          "sha256": "4ec5d9324582433076f87291c536c325becbcd7385f79137c300b563ae339b71",
+          "score": 0.7793009680138309,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "35d6480c-f9a8-50d3-8583-1e649ac6c627",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 18,
+          "sha256": "15cd34ff8515052e7bed796f55e3b722092182187ab1287cd9092c1a012a040d",
+          "score": 0.7484858566282375,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "88609870-01c8-5658-a18c-47fa32fd9b99",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 22,
+          "sha256": "429feff1b881e8843c5b1796cfdd1bac6ec46375f45d9c1eb79423eae0a64ed9",
+          "score": 0.6626108435705125,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "4ccdb338-38bc-5594-b35e-240e6fa6960d",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 24,
+          "sha256": "2dd637c6f02d3738b2b41e3f2ac70d5fe76f3b8305cdcbcca75cbfd6060f0464",
+          "score": 0.5823204745013346,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-direct-01",
+      "category": "direct",
+      "document_id": "ai-rmf",
+      "mode": "hybrid",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        19
+      ],
+      "designated_pages": [
+        19
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.851,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "729c75ca-6194-5ebf-988e-ab6bb9ad9dab",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 19,
+          "sha256": "df079fa1db3dd72bb1bc8a359c87726c720d0a48ddf12184c2980ee277970716",
+          "score": 0.032018442622950824,
+          "lexical_rank": 1,
+          "latent_rank": 4
+        },
+        {
+          "rank": 2,
+          "chunk_id": "03d97d51-f243-5efd-b587-c036cc6ebedc",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 11,
+          "sha256": "1bba5ba84b539fac8bb5730c00ca90b3334021362b9aa74f748a7dc407b620ea",
+          "score": 0.03149801587301587,
+          "lexical_rank": 4,
+          "latent_rank": 3
+        },
+        {
+          "rank": 3,
+          "chunk_id": "f00e7b65-0ac4-5079-b59d-48ec5a6f9768",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 19,
+          "sha256": "517a417d421ecd8c7f734d8c921ee2ff9d1ce8c09dd711711a5b286d215c357e",
+          "score": 0.02964426877470356,
+          "lexical_rank": 6,
+          "latent_rank": 9
+        },
+        {
+          "rank": 4,
+          "chunk_id": "8e35eadb-35db-5b6e-a30b-a356062952e6",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 14,
+          "sha256": "97add246f09b79f4bdc497c34c172a4282d83713881ace08dd0e71a26608acc4",
+          "score": 0.029083245521601686,
+          "lexical_rank": 13,
+          "latent_rank": 5
+        },
+        {
+          "rank": 5,
+          "chunk_id": "dc1ea8ab-6e1d-56d5-9e86-ba23fc4876bc",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 11,
+          "sha256": "6d7b30b919da22664f1eda966203902fbbb1424a8e20a7f29c54165739576a63",
+          "score": 0.026500526500526502,
+          "lexical_rank": 17,
+          "latent_rank": 14
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-direct-02",
+      "category": "direct",
+      "document_id": "ai-rmf",
+      "mode": "hybrid",
+      "first_relevant_rank": 3,
+      "matched_pages": [
+        23
+      ],
+      "designated_pages": [
+        23
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.942,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "620ce7a1-d6d6-59de-a3be-bc19aa2b1d2a",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 26,
+          "sha256": "ca85e89d290b3da506f1e280b6381777a587ed8c5953def61a3d0ada8e3d5524",
+          "score": 0.03200204813108039,
+          "lexical_rank": 2,
+          "latent_rank": 3
+        },
+        {
+          "rank": 2,
+          "chunk_id": "d1b8142b-0ab4-513c-95c1-280b00e502cd",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 4,
+          "sha256": "ee3619fb22ffd0bcd7dae9af444d8e72dc68b4c161ac29c6027ad0f67ae5961d",
+          "score": 0.030776515151515152,
+          "lexical_rank": 4,
+          "latent_rank": 6
+        },
+        {
+          "rank": 3,
+          "chunk_id": "ed31bd3e-8a37-5e57-9c7e-75122a1ad640",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 23,
+          "sha256": "d363601704a6fe201f75a37fefabd7dfea2f81eeca6567f0af4b176ef5d9938b",
+          "score": 0.029631255487269532,
+          "lexical_rank": 7,
+          "latent_rank": 8
+        },
+        {
+          "rank": 4,
+          "chunk_id": "82dc0fed-4bcf-558e-8ea1-8ec646844460",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 38,
+          "sha256": "a6fc3ddab0bfe41dd7b393fa9ee92ca2d10b272e2d14b860edfbaa34c0fdb304",
+          "score": 0.029513888888888888,
+          "lexical_rank": 12,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "1bfe5e1f-8b80-5ddc-9c36-2800b355019a",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 47,
+          "sha256": "1bb237aeafe5d60cc3a66ff1d989d622770694665fd4695f2db32d0738f97929",
+          "score": 0.02938045560996381,
+          "lexical_rank": 17,
+          "latent_rank": 1
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-direct-03",
+      "category": "direct",
+      "document_id": "ai-rmf",
+      "mode": "hybrid",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        22
+      ],
+      "designated_pages": [
+        22
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.752,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "aafc5b98-213b-5e9c-971a-67eb9edffcc1",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 22,
+          "sha256": "6f0174a85f12d7dc91734d43cb2478bc26082f12fed70381d1e41fc06fb9f52b",
+          "score": 0.03278688524590164,
+          "lexical_rank": 1,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "dfc72049-31c5-5c97-9bab-508c40e4061d",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 46,
+          "sha256": "025cf99396fac5685c7fd030e9b03697dd1a352fd05607763c5445005ee5485b",
+          "score": 0.03200204813108039,
+          "lexical_rank": 3,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "51c007da-a7bd-5e1f-abde-c90f80877629",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 41,
+          "sha256": "3a9aa17a6edb79bcd86ba2ee2dd89af336dd30743b0b5ee242cd77d72427c0a6",
+          "score": 0.03125,
+          "lexical_rank": 4,
+          "latent_rank": 4
+        },
+        {
+          "rank": 4,
+          "chunk_id": "ad5df4f9-f0c2-58fd-b4b7-b12093add013",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 22,
+          "sha256": "d850dca663f03f54bbde7a01552ab78ab0cef40994d28b8a747fe5e23ff86b4a",
+          "score": 0.030536130536130537,
+          "lexical_rank": 5,
+          "latent_rank": 6
+        },
+        {
+          "rank": 5,
+          "chunk_id": "0ea8a23a-f63d-5c7a-bf5b-0a91bfedd82d",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 44,
+          "sha256": "60b702c9a35597b87cf3a6d1b780031bba6cc0c745e66072c82c433febfe492b",
+          "score": 0.03036576949620428,
+          "lexical_rank": 9,
+          "latent_rank": 3
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-procedural-01",
+      "category": "procedural",
+      "document_id": "ai-rmf",
+      "mode": "hybrid",
+      "first_relevant_rank": null,
+      "matched_pages": [],
+      "designated_pages": [
+        29
+      ],
+      "designated_page_recall": 0.0,
+      "took_ms": 2.85,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "0251cd8e-fa2f-5d7d-b0b9-1f982ad28afa",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 10,
+          "sha256": "ba3a59faebdd8b2a0ac4cd2d38ab6d3dfadb08e91d5939a5563cab23cb129d1b",
+          "score": 0.031544957774465976,
+          "lexical_rank": 6,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "f25b685e-d794-5348-86e2-ba6a73470dbc",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 52,
+          "sha256": "3a4282ae09b4e39bed65ef38df458859a7f2cf4883970f1d3bb2d8395f1d877c",
+          "score": 0.03057889822595705,
+          "lexical_rank": 8,
+          "latent_rank": 3
+        },
+        {
+          "rank": 3,
+          "chunk_id": "d9ffe861-6631-5049-91e2-0a3eeb26b36b",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 25,
+          "sha256": "ff8d634614d4fa7e90a74f2e1b2b1da5e7b9aa3d37240d9fd0a076a228bce312",
+          "score": 0.03047794966520434,
+          "lexical_rank": 1,
+          "latent_rank": 11
+        },
+        {
+          "rank": 4,
+          "chunk_id": "30da4957-a9b8-5ac3-9919-0a5f2919475e",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 26,
+          "sha256": "e3d1e7444ac97f643ea34308c8d0cc77ecf710919633c32c7a6ea1ed42925519",
+          "score": 0.030158730158730156,
+          "lexical_rank": 3,
+          "latent_rank": 10
+        },
+        {
+          "rank": 5,
+          "chunk_id": "f46fc9b8-5b82-59b2-9dce-0e3473a7990d",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 32,
+          "sha256": "020b5817d03bf36daa4353de85f78c62a555817ecea3f8162404191d2dae3e62",
+          "score": 0.029877369007803793,
+          "lexical_rank": 5,
+          "latent_rank": 9
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-procedural-02",
+      "category": "procedural",
+      "document_id": "ai-rmf",
+      "mode": "hybrid",
+      "first_relevant_rank": 2,
+      "matched_pages": [
+        36
+      ],
+      "designated_pages": [
+        36
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.783,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "fd292160-1a7f-5cee-9b26-946eae9b3afe",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 42,
+          "sha256": "56c3ba91c92722887b7a7e62ccf317048876a138ef68c69a193a6a7637501f61",
+          "score": 0.03225806451612903,
+          "lexical_rank": 2,
+          "latent_rank": 2
+        },
+        {
+          "rank": 2,
+          "chunk_id": "79135ae7-bf45-5fa9-a54d-991ee87d8768",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 36,
+          "sha256": "8228c8c05bf0f3eb612e386b6c6ad909cad1cb0215352f50d576e2e2d9199f29",
+          "score": 0.03177805800756621,
+          "lexical_rank": 1,
+          "latent_rank": 5
+        },
+        {
+          "rank": 3,
+          "chunk_id": "fff5cc22-a099-5445-a432-4d5cc2e2511c",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 49,
+          "sha256": "01c89ab050d1bc809d9e1c2a24c8ade26efd15cab1232d8ab1841e83e22a2473",
+          "score": 0.031009615384615385,
+          "lexical_rank": 5,
+          "latent_rank": 4
+        },
+        {
+          "rank": 4,
+          "chunk_id": "c25d5629-c821-511f-8237-055a602db874",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 43,
+          "sha256": "b0816066f182212e041d0e131e0d424c852107a63fdb2858147c954da2124fde",
+          "score": 0.03047794966520434,
+          "lexical_rank": 11,
+          "latent_rank": 1
+        },
+        {
+          "rank": 5,
+          "chunk_id": "44bbc0d1-7e32-5235-b5fe-f34595ac6bc3",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 13,
+          "sha256": "3ab18e010cfd466064261740810116a683fe66a06553da2940657467799e0175",
+          "score": 0.028665028665028666,
+          "lexical_rank": 6,
+          "latent_rank": 14
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-procedural-03",
+      "category": "procedural",
+      "document_id": "ai-rmf",
+      "mode": "hybrid",
+      "first_relevant_rank": null,
+      "matched_pages": [],
+      "designated_pages": [
+        37
+      ],
+      "designated_page_recall": 0.0,
+      "took_ms": 2.868,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "8e35eadb-35db-5b6e-a30b-a356062952e6",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 14,
+          "sha256": "97add246f09b79f4bdc497c34c172a4282d83713881ace08dd0e71a26608acc4",
+          "score": 0.02946912242686891,
+          "lexical_rank": 5,
+          "latent_rank": 11
+        },
+        {
+          "rank": 2,
+          "chunk_id": "fd292160-1a7f-5cee-9b26-946eae9b3afe",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 42,
+          "sha256": "56c3ba91c92722887b7a7e62ccf317048876a138ef68c69a193a6a7637501f61",
+          "score": 0.029051670471052088,
+          "lexical_rank": 19,
+          "latent_rank": 1
+        },
+        {
+          "rank": 3,
+          "chunk_id": "000e365e-540e-5cf7-952e-d2c63a5c5d39",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 7,
+          "sha256": "d63527b3f14eeb8604db0a202a80cebf215bd1fd160a818802f240a5f88f74c0",
+          "score": 0.028949545078577336,
+          "lexical_rank": 18,
+          "latent_rank": 2
+        },
+        {
+          "rank": 4,
+          "chunk_id": "7f0b508f-a2e8-5c30-8d75-1da8d62b78dd",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 30,
+          "sha256": "c0dd51b11aa7233e30f3ee5f99851d762f0c7868205a6fd22abdca5cee52f8e7",
+          "score": 0.0288981288981289,
+          "lexical_rank": 14,
+          "latent_rank": 5
+        },
+        {
+          "rank": 5,
+          "chunk_id": "03a92ef2-cfc6-5621-a034-43b3f21b4a84",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 7,
+          "sha256": "e9b84e2d7237ca3d4c557c166b9a51975f0340e43adfb1d04d5382bc8aba3693",
+          "score": 0.02857142857142857,
+          "lexical_rank": 10,
+          "latent_rank": 10
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-nearby-01",
+      "category": "nearby",
+      "document_id": "ai-rmf",
+      "mode": "hybrid",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        21
+      ],
+      "designated_pages": [
+        21
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 3.134,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "1614f111-3e54-5e83-951c-569cd9786fd0",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 21,
+          "sha256": "937b6b78006a2bd27ae3dbcf72dedd433f8e401349d8814c444eb9bce2c0978f",
+          "score": 0.03252247488101534,
+          "lexical_rank": 2,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "aafc5b98-213b-5e9c-971a-67eb9edffcc1",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 22,
+          "sha256": "6f0174a85f12d7dc91734d43cb2478bc26082f12fed70381d1e41fc06fb9f52b",
+          "score": 0.032018442622950824,
+          "lexical_rank": 1,
+          "latent_rank": 4
+        },
+        {
+          "rank": 3,
+          "chunk_id": "dc1ea8ab-6e1d-56d5-9e86-ba23fc4876bc",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 11,
+          "sha256": "6d7b30b919da22664f1eda966203902fbbb1424a8e20a7f29c54165739576a63",
+          "score": 0.027783137179239824,
+          "lexical_rank": 11,
+          "latent_rank": 13
+        },
+        {
+          "rank": 4,
+          "chunk_id": "d2c12bf4-b063-5a6c-815b-eb9c8f0384f0",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 44,
+          "sha256": "8165754493d8ea36010c70859d68831ea34504c62297ff8a4c48186a0fbfbcb3",
+          "score": 0.027692895339954164,
+          "lexical_rank": 8,
+          "latent_rank": 17
+        },
+        {
+          "rank": 5,
+          "chunk_id": "1bfe5e1f-8b80-5ddc-9c36-2800b355019a",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 47,
+          "sha256": "1bb237aeafe5d60cc3a66ff1d989d622770694665fd4695f2db32d0738f97929",
+          "score": 0.02749266862170088,
+          "lexical_rank": 28,
+          "latent_rank": 2
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ai-rmf-nearby-02",
+      "category": "nearby",
+      "document_id": "ai-rmf",
+      "mode": "hybrid",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        38
+      ],
+      "designated_pages": [
+        38
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.929,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "a0e0a643-6398-53b9-bdb5-895b0017c8c3",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 38,
+          "sha256": "f3f59785ebc6e1a791a0a93b49cd0af5fe20bead3e8e5d3d86aedf48cec156c3",
+          "score": 0.03278688524590164,
+          "lexical_rank": 1,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "82dc0fed-4bcf-558e-8ea1-8ec646844460",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 38,
+          "sha256": "a6fc3ddab0bfe41dd7b393fa9ee92ca2d10b272e2d14b860edfbaa34c0fdb304",
+          "score": 0.03200204813108039,
+          "lexical_rank": 3,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "707ff827-6422-547e-8727-ca97e1c30e03",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 39,
+          "sha256": "a103f90e7aff5be939abfaef13227ba9ad0c2f4c37b7566abb2ac880d08823f5",
+          "score": 0.03128054740957967,
+          "lexical_rank": 2,
+          "latent_rank": 6
+        },
+        {
+          "rank": 4,
+          "chunk_id": "89b99f3e-7ae0-5039-9a88-3a03d3899082",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 1,
+          "sha256": "813aa78fdac2f43cd54403e795c86d650fd99461f6f2917f407e51e8c9755a78",
+          "score": 0.029910714285714284,
+          "lexical_rank": 4,
+          "latent_rank": 10
+        },
+        {
+          "rank": 5,
+          "chunk_id": "d1b8142b-0ab4-513c-95c1-280b00e502cd",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 4,
+          "sha256": "ee3619fb22ffd0bcd7dae9af444d8e72dc68b4c161ac29c6027ad0f67ae5961d",
+          "score": 0.02877846790890269,
+          "lexical_rank": 10,
+          "latent_rank": 9
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-direct-01",
+      "category": "direct",
+      "document_id": "genai-profile",
+      "mode": "hybrid",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        12
+      ],
+      "designated_pages": [
+        12
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.755,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "a2075a1c-b805-5d80-bd0a-36644e82fd1b",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 12,
+          "sha256": "1b7f20cc087c73abb05504b5f474c4c2c21ab5180f97bd1e5c59752e1dbf3ce4",
+          "score": 0.03278688524590164,
+          "lexical_rank": 1,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "33903c96-6403-5eb8-b864-f6f69478bd5e",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 41,
+          "sha256": "05d37f6c46d9b9338dc258c96b96230ff1d674b15301894e1d2a137eda993252",
+          "score": 0.03225806451612903,
+          "lexical_rank": 2,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "6a3e2a6d-ecb5-531b-9620-14be960d14d0",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 51,
+          "sha256": "b86cfd0520c19ed9e3c9157b5325707ef0903546a3d3a8dc569cee356b55a5eb",
+          "score": 0.030117753623188408,
+          "lexical_rank": 4,
+          "latent_rank": 9
+        },
+        {
+          "rank": 4,
+          "chunk_id": "2985589a-958b-58a0-9f46-5c01520caec4",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 5,
+          "sha256": "f73125cff0dc292adbba2370fbbb3358bb43a172f6419475eec2084c3805a054",
+          "score": 0.028612012987012988,
+          "lexical_rank": 17,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "30d8549b-d8a0-5dd9-8176-5c6100056116",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 6,
+          "sha256": "10dbf427f57239dfb8f8181ca56a5922e295982e1d38945a2e2f0b9c2eb84af4",
+          "score": 0.0273972602739726,
+          "lexical_rank": 13,
+          "latent_rank": 13
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-direct-02",
+      "category": "direct",
+      "document_id": "genai-profile",
+      "mode": "hybrid",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        55
+      ],
+      "designated_pages": [
+        55
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.542,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "9889ab44-002c-55fe-b37a-23a370ab4c2f",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "7f32d902e8742ee5f56166adba8fb7b7c839be25fd02e340d09259912fcaa74d",
+          "score": 0.03278688524590164,
+          "lexical_rank": 1,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "edf7a562-b6db-5ba2-a59b-6baebdb612ff",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 56,
+          "sha256": "525a50ce4ee9fe96b84fd7eea60f51a88d130ed2083d6b29dd0eac3c58dd8382",
+          "score": 0.03200204813108039,
+          "lexical_rank": 2,
+          "latent_rank": 3
+        },
+        {
+          "rank": 3,
+          "chunk_id": "9f867f4b-ed6a-50ed-9d4f-cffddb9f985d",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "353a03a5105e7bfe19c6c3e92cc8e58cec53cc0eccaf26c7e05d18d1de15871f",
+          "score": 0.031754032258064516,
+          "lexical_rank": 4,
+          "latent_rank": 2
+        },
+        {
+          "rank": 4,
+          "chunk_id": "399eb6eb-6cc6-5105-a5d1-28289bce2886",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "6088f56eef833110cd8ec44cefb0123af40d0ffbb31c5a0b7e1933e6d002a48c",
+          "score": 0.03149801587301587,
+          "lexical_rank": 3,
+          "latent_rank": 4
+        },
+        {
+          "rank": 5,
+          "chunk_id": "b1abad45-7b40-597c-8139-340eae550d89",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 44,
+          "sha256": "507f0163092e75863c824747fdad046452f2b7ddec3b0536ad661fa3e1c14662",
+          "score": 0.02967032967032967,
+          "lexical_rank": 10,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-direct-03",
+      "category": "direct",
+      "document_id": "genai-profile",
+      "mode": "hybrid",
+      "first_relevant_rank": null,
+      "matched_pages": [],
+      "designated_pages": [
+        15
+      ],
+      "designated_page_recall": 0.0,
+      "took_ms": 2.63,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "89b99f3e-7ae0-5039-9a88-3a03d3899082",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 1,
+          "sha256": "813aa78fdac2f43cd54403e795c86d650fd99461f6f2917f407e51e8c9755a78",
+          "score": 0.03177805800756621,
+          "lexical_rank": 1,
+          "latent_rank": 5
+        },
+        {
+          "rank": 2,
+          "chunk_id": "1bfcf840-9f0c-5661-87d0-5dd739c65e58",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 2,
+          "sha256": "70e1c0b6f580da331bb5f0ca750b97b71555d9ab80d8d04bafe57083bc351999",
+          "score": 0.03057889822595705,
+          "lexical_rank": 3,
+          "latent_rank": 8
+        },
+        {
+          "rank": 3,
+          "chunk_id": "2985589a-958b-58a0-9f46-5c01520caec4",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 5,
+          "sha256": "f73125cff0dc292adbba2370fbbb3358bb43a172f6419475eec2084c3805a054",
+          "score": 0.030117753623188408,
+          "lexical_rank": 9,
+          "latent_rank": 4
+        },
+        {
+          "rank": 4,
+          "chunk_id": "82dc0fed-4bcf-558e-8ea1-8ec646844460",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 38,
+          "sha256": "a6fc3ddab0bfe41dd7b393fa9ee92ca2d10b272e2d14b860edfbaa34c0fdb304",
+          "score": 0.029850746268656716,
+          "lexical_rank": 7,
+          "latent_rank": 7
+        },
+        {
+          "rank": 5,
+          "chunk_id": "707ff827-6422-547e-8727-ca97e1c30e03",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 39,
+          "sha256": "a103f90e7aff5be939abfaef13227ba9ad0c2f4c37b7566abb2ac880d08823f5",
+          "score": 0.02964426877470356,
+          "lexical_rank": 6,
+          "latent_rank": 9
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-procedural-01",
+      "category": "procedural",
+      "document_id": "genai-profile",
+      "mode": "hybrid",
+      "first_relevant_rank": null,
+      "matched_pages": [],
+      "designated_pages": [
+        21
+      ],
+      "designated_page_recall": 0.0,
+      "took_ms": 2.733,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "53b35a3c-c986-5eaa-ae75-48fcd67c83ed",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 28,
+          "sha256": "1b133a10e61b25aaadd753f653ec6838fde4354b37a10c3a04055e90173cacef",
+          "score": 0.032018442622950824,
+          "lexical_rank": 1,
+          "latent_rank": 4
+        },
+        {
+          "rank": 2,
+          "chunk_id": "d2c12bf4-b063-5a6c-815b-eb9c8f0384f0",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 44,
+          "sha256": "8165754493d8ea36010c70859d68831ea34504c62297ff8a4c48186a0fbfbcb3",
+          "score": 0.03131881575727918,
+          "lexical_rank": 7,
+          "latent_rank": 1
+        },
+        {
+          "rank": 3,
+          "chunk_id": "9d1e5cc9-ca53-5f7c-b589-618dd9f2c9e1",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 43,
+          "sha256": "e924bf520ed1f49a23c5d57186b6d058665ab4b464de43b37ed7428017beb43d",
+          "score": 0.030621785881252923,
+          "lexical_rank": 9,
+          "latent_rank": 2
+        },
+        {
+          "rank": 4,
+          "chunk_id": "a1706e09-c079-5bd5-85e9-0f7e5842ad5c",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 51,
+          "sha256": "c83b8444b465038fe63629a16d17770b86a92894eb462b529098207577d8b8a0",
+          "score": 0.03036576949620428,
+          "lexical_rank": 3,
+          "latent_rank": 9
+        },
+        {
+          "rank": 5,
+          "chunk_id": "261737a0-7cb8-5f4a-9267-b84aa32be01f",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 6,
+          "sha256": "aea4714f1298e89600cfd8307d742d1f0535f85a23d1a40e7f76e2536e74fd7e",
+          "score": 0.028484848484848488,
+          "lexical_rank": 6,
+          "latent_rank": 15
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-procedural-02",
+      "category": "procedural",
+      "document_id": "genai-profile",
+      "mode": "hybrid",
+      "first_relevant_rank": null,
+      "matched_pages": [],
+      "designated_pages": [
+        25
+      ],
+      "designated_page_recall": 0.0,
+      "took_ms": 2.529,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "9f867f4b-ed6a-50ed-9d4f-cffddb9f985d",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "353a03a5105e7bfe19c6c3e92cc8e58cec53cc0eccaf26c7e05d18d1de15871f",
+          "score": 0.03128054740957967,
+          "lexical_rank": 6,
+          "latent_rank": 2
+        },
+        {
+          "rank": 2,
+          "chunk_id": "399eb6eb-6cc6-5105-a5d1-28289bce2886",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "6088f56eef833110cd8ec44cefb0123af40d0ffbb31c5a0b7e1933e6d002a48c",
+          "score": 0.031009615384615385,
+          "lexical_rank": 5,
+          "latent_rank": 4
+        },
+        {
+          "rank": 3,
+          "chunk_id": "9889ab44-002c-55fe-b37a-23a370ab4c2f",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "7f32d902e8742ee5f56166adba8fb7b7c839be25fd02e340d09259912fcaa74d",
+          "score": 0.03028233151183971,
+          "lexical_rank": 12,
+          "latent_rank": 1
+        },
+        {
+          "rank": 4,
+          "chunk_id": "5a531670-6e02-5b62-85d6-d501ef7a1601",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 24,
+          "sha256": "0ba21af9aae830925b5ec233f735d2417df89b04d3c70650945b7fee39f69c1a",
+          "score": 0.029906956136464335,
+          "lexical_rank": 1,
+          "latent_rank": 14
+        },
+        {
+          "rank": 5,
+          "chunk_id": "01903f5a-2cec-5fcc-9098-a9918962262e",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 23,
+          "sha256": "3e9288d71f21443dc4eba26a82889380d5c398859ca5831cbcf7c5a3f05501f3",
+          "score": 0.029850746268656716,
+          "lexical_rank": 7,
+          "latent_rank": 7
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-procedural-03",
+      "category": "procedural",
+      "document_id": "genai-profile",
+      "mode": "hybrid",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        57
+      ],
+      "designated_pages": [
+        57
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 3.625,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "e9e69c6d-09eb-5d16-a3ec-dcf460f1db06",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 57,
+          "sha256": "5c761166dfeb147bed9f3bd7e21d76c6bd328e107b60921345a2a8fe581ae657",
+          "score": 0.03278688524590164,
+          "lexical_rank": 1,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "c1ed7b6c-756f-5588-8d13-80ee62b4d989",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 46,
+          "sha256": "34ab058b4466efd0252ed886483ed6e7c20bd904b2f293d9d0a30b64143a786a",
+          "score": 0.030621785881252923,
+          "lexical_rank": 9,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "880dd9a8-9fe8-5c10-9251-a7f00a11a07d",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 31,
+          "sha256": "ef0ad49f1ad4ffc60ff7088b28011afbdc3971ac8d68f9ce20d82ca3b1994780",
+          "score": 0.030309988518943745,
+          "lexical_rank": 5,
+          "latent_rank": 7
+        },
+        {
+          "rank": 4,
+          "chunk_id": "30d8549b-d8a0-5dd9-8176-5c6100056116",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 6,
+          "sha256": "10dbf427f57239dfb8f8181ca56a5922e295982e1d38945a2e2f0b9c2eb84af4",
+          "score": 0.029571646010002173,
+          "lexical_rank": 3,
+          "latent_rank": 13
+        },
+        {
+          "rank": 5,
+          "chunk_id": "70e47782-1c9c-53c9-88d3-1466c55c3cfc",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 23,
+          "sha256": "8463ce4b395495f8f51151d0d1a6c34e8bf442314345a282bb65b180ee29b882",
+          "score": 0.02878726010616578,
+          "lexical_rank": 2,
+          "latent_rank": 19
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-nearby-01",
+      "category": "nearby",
+      "document_id": "genai-profile",
+      "mode": "hybrid",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        15
+      ],
+      "designated_pages": [
+        15
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.8,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "feb6e26e-e674-5fa6-9ba9-92fff081c961",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 15,
+          "sha256": "d7b1e2aaf12a76cf81f1c9e5f9805c71f95774071cba8a8c21690dfa57423bc5",
+          "score": 0.03252247488101534,
+          "lexical_rank": 1,
+          "latent_rank": 2
+        },
+        {
+          "rank": 2,
+          "chunk_id": "4cc958c4-28dd-5a84-a5ca-7b3b79852347",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 14,
+          "sha256": "5e4be412c579721c4d2e2421c3fe086df647de1f162a499984fd40827cc207b0",
+          "score": 0.032266458495966696,
+          "lexical_rank": 3,
+          "latent_rank": 1
+        },
+        {
+          "rank": 3,
+          "chunk_id": "ba17376d-60f8-5eff-bf94-71e196ca0e01",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 13,
+          "sha256": "f7fe24ca5f1562563ce72817fcefeeab546fcf95a7f1655f173accc6fd20ac4c",
+          "score": 0.030776515151515152,
+          "lexical_rank": 6,
+          "latent_rank": 4
+        },
+        {
+          "rank": 4,
+          "chunk_id": "89b99f3e-7ae0-5039-9a88-3a03d3899082",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 1,
+          "sha256": "813aa78fdac2f43cd54403e795c86d650fd99461f6f2917f407e51e8c9755a78",
+          "score": 0.029850746268656716,
+          "lexical_rank": 7,
+          "latent_rank": 7
+        },
+        {
+          "rank": 5,
+          "chunk_id": "0d671541-c38d-5949-8bb8-fb7b62e76d76",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 58,
+          "sha256": "4b7025e98740a46142b4b89bcd262d862fc4bb17dbe47bc5ec8fdc1ff5b3bd1f",
+          "score": 0.02854251012145749,
+          "lexical_rank": 5,
+          "latent_rank": 16
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-genai-profile-nearby-02",
+      "category": "nearby",
+      "document_id": "genai-profile",
+      "mode": "hybrid",
+      "first_relevant_rank": 3,
+      "matched_pages": [
+        53
+      ],
+      "designated_pages": [
+        53
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.706,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "73c1294f-e820-5062-b676-3afd1fd99065",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 54,
+          "sha256": "8a302a162e69e5a3de144505adf622c5c2fdfee200e2ff0c2212189b56f71c87",
+          "score": 0.032266458495966696,
+          "lexical_rank": 1,
+          "latent_rank": 3
+        },
+        {
+          "rank": 2,
+          "chunk_id": "b9594dec-e97b-5b40-a78a-5750a1c1f566",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 54,
+          "sha256": "3a6a84a90c57ff3d5e47739657c79a0a199c66700b4d8bd3a3b6fe9abe0eeafc",
+          "score": 0.032018442622950824,
+          "lexical_rank": 4,
+          "latent_rank": 1
+        },
+        {
+          "rank": 3,
+          "chunk_id": "7964b219-dbe4-5d9f-ba80-0d959207ca76",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 53,
+          "sha256": "36133c65ac68654fc81aa7e2ec3c006d065f254cec8566b72d3a7a344f230fca",
+          "score": 0.031754032258064516,
+          "lexical_rank": 2,
+          "latent_rank": 4
+        },
+        {
+          "rank": 4,
+          "chunk_id": "7209cbf8-3086-5590-bfaf-189eb0b33f36",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 54,
+          "sha256": "cf65d8f2dee745eb050c15a9e34dd6974b7cf1c228f6c5d32964215ba08a5fc9",
+          "score": 0.03128054740957967,
+          "lexical_rank": 6,
+          "latent_rank": 2
+        },
+        {
+          "rank": 5,
+          "chunk_id": "9f867f4b-ed6a-50ed-9d4f-cffddb9f985d",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 55,
+          "sha256": "353a03a5105e7bfe19c6c3e92cc8e58cec53cc0eccaf26c7e05d18d1de15871f",
+          "score": 0.030090497737556562,
+          "lexical_rank": 8,
+          "latent_rank": 5
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-direct-01",
+      "category": "direct",
+      "document_id": "ssdf",
+      "mode": "hybrid",
+      "first_relevant_rank": 2,
+      "matched_pages": [
+        16
+      ],
+      "designated_pages": [
+        16
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.713,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "0352e62d-2eda-5b52-9176-7d2ce7dd1bc1",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 18,
+          "sha256": "b75a5f13d89c5a7f7c4504d8c06b8d1dced126f42a7b6bef54ffeb1f0c2caf1b",
+          "score": 0.032018442622950824,
+          "lexical_rank": 1,
+          "latent_rank": 4
+        },
+        {
+          "rank": 2,
+          "chunk_id": "262be4fc-828e-5639-ae31-f59dae619ae7",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 16,
+          "sha256": "6eae31f690f3e9227a1cbaca23213e35ee45da3da4f071915d78141a724de630",
+          "score": 0.03177805800756621,
+          "lexical_rank": 5,
+          "latent_rank": 1
+        },
+        {
+          "rank": 3,
+          "chunk_id": "eb8d0656-cb9f-5974-8238-82d282e20f13",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 33,
+          "sha256": "abf86d13af3cae9bfa2cf1cfd8a2421dd6d0b1533980fdf43a6106fd6d30a07a",
+          "score": 0.0304147465437788,
+          "lexical_rank": 10,
+          "latent_rank": 2
+        },
+        {
+          "rank": 4,
+          "chunk_id": "7eacdf57-3521-511d-b496-11d3f6541d31",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 16,
+          "sha256": "713e308eab57425e8ccc9b3b8ad0490009806bfd711e9b5109189ff078797183",
+          "score": 0.030330882352941176,
+          "lexical_rank": 4,
+          "latent_rank": 8
+        },
+        {
+          "rank": 5,
+          "chunk_id": "05522311-09e4-5ff9-bbeb-71778dc64981",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 16,
+          "sha256": "f5c6615732fec608dddd99b92631acef91ce43f2a18ed8025ce87d28fd41e2a7",
+          "score": 0.030017921146953404,
+          "lexical_rank": 2,
+          "latent_rank": 12
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-direct-02",
+      "category": "direct",
+      "document_id": "ssdf",
+      "mode": "hybrid",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        15
+      ],
+      "designated_pages": [
+        15
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.561,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "4dcef768-279d-5db2-8259-5d6b0e29fc7d",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 15,
+          "sha256": "eb7b7384e3f6369cc78558c438e1d25f6fb2769718303795fe53a94e2e9301bf",
+          "score": 0.03278688524590164,
+          "lexical_rank": 1,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "88f4bbdb-7337-5a67-a6c4-849e5897f5b3",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 15,
+          "sha256": "c400ad3b1ef0b1a0b2c838ce435dc69b96ec5df27700aa2f6d8c4fba238f8a91",
+          "score": 0.0315136476426799,
+          "lexical_rank": 2,
+          "latent_rank": 5
+        },
+        {
+          "rank": 3,
+          "chunk_id": "f1420631-613e-5a14-a9d7-fb128854a689",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 6,
+          "sha256": "acdfc5fd61c9469b19de93a3e3f80d81afa9abff22b70837125b56031acfc1bd",
+          "score": 0.031024531024531024,
+          "lexical_rank": 3,
+          "latent_rank": 6
+        },
+        {
+          "rank": 4,
+          "chunk_id": "6ab462ac-bbd2-59bb-b1aa-11513938d653",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 8,
+          "sha256": "403ccfc1b9c60b0998fbe5f20b440e2d4a62b93f42c1a9a53ffc067f5ceb7f64",
+          "score": 0.030798389007344232,
+          "lexical_rank": 7,
+          "latent_rank": 3
+        },
+        {
+          "rank": 5,
+          "chunk_id": "0023740f-99f5-56a3-8e81-7632aa9a25ce",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 10,
+          "sha256": "3c77fe895ff49a97c0e591f64d67274793475c090f6d1f89c4a4c1f5af365fd8",
+          "score": 0.029910714285714284,
+          "lexical_rank": 4,
+          "latent_rank": 10
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-direct-03",
+      "category": "direct",
+      "document_id": "ssdf",
+      "mode": "hybrid",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        25
+      ],
+      "designated_pages": [
+        25
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.674,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "20a47c88-a975-5a99-b91c-b5746a31121f",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 25,
+          "sha256": "b99fb6af5a5dae8f6fa2dffaa1228cf00712a40cf3fbab578c93bea8601a4e89",
+          "score": 0.032018442622950824,
+          "lexical_rank": 1,
+          "latent_rank": 4
+        },
+        {
+          "rank": 2,
+          "chunk_id": "9e699273-7a31-53c3-b878-7c0f335f1fc3",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 12,
+          "sha256": "89994da69feafc91370b7913b992d67fea03b23f1394bcd00f4a41ea706e1a6d",
+          "score": 0.03200204813108039,
+          "lexical_rank": 2,
+          "latent_rank": 3
+        },
+        {
+          "rank": 3,
+          "chunk_id": "0fc737ff-3359-557e-8714-670730ba5a24",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 14,
+          "sha256": "5a8dc2a256055067a8bbcab5a741dad5d23d8ed7597dbbe32731e9ac7a5035ca",
+          "score": 0.031009615384615385,
+          "lexical_rank": 4,
+          "latent_rank": 5
+        },
+        {
+          "rank": 4,
+          "chunk_id": "7e2c859c-0970-5d39-9ced-4a35387e1b98",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 4,
+          "sha256": "a9668f0b5aa1a15c8befb329ecfca4929d0b70d97eaef6438f0e9df4e614852c",
+          "score": 0.03047794966520434,
+          "lexical_rank": 11,
+          "latent_rank": 1
+        },
+        {
+          "rank": 5,
+          "chunk_id": "12be847c-6d67-52fb-b4f7-2f8eb79048d9",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 10,
+          "sha256": "5c9f750fa9d4ed03049e8a9da0801f1fd752387bef8d215301475ed4065e9c9a",
+          "score": 0.028949545078577336,
+          "lexical_rank": 18,
+          "latent_rank": 2
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-procedural-01",
+      "category": "procedural",
+      "document_id": "ssdf",
+      "mode": "hybrid",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        18
+      ],
+      "designated_pages": [
+        18
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.449,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "0352e62d-2eda-5b52-9176-7d2ce7dd1bc1",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 18,
+          "sha256": "b75a5f13d89c5a7f7c4504d8c06b8d1dced126f42a7b6bef54ffeb1f0c2caf1b",
+          "score": 0.03278688524590164,
+          "lexical_rank": 1,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "aa8a14e9-9e9a-5972-9b4a-0df07ae15150",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 18,
+          "sha256": "3d50e875983d1190e54f0c79751e57cbcff327a8cf3a24dd2f40f50ad15e7899",
+          "score": 0.03200204813108039,
+          "lexical_rank": 2,
+          "latent_rank": 3
+        },
+        {
+          "rank": 3,
+          "chunk_id": "e18b9061-587a-5e18-859b-85340a3da9de",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 17,
+          "sha256": "9f226abc734d02b68c3be3f3b765ee8d97d1b55d0bf68ceea51d166867687d1a",
+          "score": 0.0304147465437788,
+          "lexical_rank": 10,
+          "latent_rank": 2
+        },
+        {
+          "rank": 4,
+          "chunk_id": "0fc737ff-3359-557e-8714-670730ba5a24",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 14,
+          "sha256": "5a8dc2a256055067a8bbcab5a741dad5d23d8ed7597dbbe32731e9ac7a5035ca",
+          "score": 0.029850746268656716,
+          "lexical_rank": 7,
+          "latent_rank": 7
+        },
+        {
+          "rank": 5,
+          "chunk_id": "ae9b8caa-a7d9-5fce-9b50-e8f585202552",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 20,
+          "sha256": "5772c961e7fdb35789ece781d84ff5fe307fc2dde80474036e804a7ef641fbe9",
+          "score": 0.028068137824235385,
+          "lexical_rank": 3,
+          "latent_rank": 22
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-procedural-02",
+      "category": "procedural",
+      "document_id": "ssdf",
+      "mode": "hybrid",
+      "first_relevant_rank": 3,
+      "matched_pages": [
+        22
+      ],
+      "designated_pages": [
+        22
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 3.015,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "0fc737ff-3359-557e-8714-670730ba5a24",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 14,
+          "sha256": "5a8dc2a256055067a8bbcab5a741dad5d23d8ed7597dbbe32731e9ac7a5035ca",
+          "score": 0.03125,
+          "lexical_rank": 4,
+          "latent_rank": 4
+        },
+        {
+          "rank": 2,
+          "chunk_id": "5639c3c1-104e-5bd0-b27e-a8c329b263ff",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 21,
+          "sha256": "4f10d0d7ac13c2f25945e562b0e7b805209c68d77c5a80388332ec1e9f5248f0",
+          "score": 0.031099324975891997,
+          "lexical_rank": 8,
+          "latent_rank": 1
+        },
+        {
+          "rank": 3,
+          "chunk_id": "6e593e60-865c-5014-9275-724876a17608",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 22,
+          "sha256": "5dd9b8c723fe3f784cffdb29eaa62f764e1f199e65f5a01b1f8240e36bda095b",
+          "score": 0.031099324975891997,
+          "lexical_rank": 1,
+          "latent_rank": 8
+        },
+        {
+          "rank": 4,
+          "chunk_id": "ce88193b-e339-524c-92da-2a182e9fab41",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 14,
+          "sha256": "388361d938393230bae9c39a6d05bbd44f87a4de3b56b9bdfd5f0e9962d89b26",
+          "score": 0.031024531024531024,
+          "lexical_rank": 3,
+          "latent_rank": 6
+        },
+        {
+          "rank": 5,
+          "chunk_id": "353facad-d416-5ce4-a0bf-7ba775bc21ba",
+          "document_id": "ai-rmf",
+          "version": 1,
+          "page": 26,
+          "sha256": "85ece52e6535498928e64538e6208591ff7afda7d4a92689c3d14ab0352fe2d3",
+          "score": 0.02964254577157803,
+          "lexical_rank": 2,
+          "latent_rank": 14
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-procedural-03",
+      "category": "procedural",
+      "document_id": "ssdf",
+      "mode": "hybrid",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        27
+      ],
+      "designated_pages": [
+        27
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.461,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "afa77bf8-8682-53ed-8217-87e2c6c1c4f7",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 27,
+          "sha256": "052c6552bc843ee1a4ff58a4aaddc08550c160f9737027323577a6ee4aa6c122",
+          "score": 0.03278688524590164,
+          "lexical_rank": 1,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "a4aed932-d4b6-53a8-92b5-8453ab6052b0",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 26,
+          "sha256": "092cc3c2604401bba6970901cdc89bd149fb331f9f693218329b667ecadbfcff",
+          "score": 0.03128054740957967,
+          "lexical_rank": 6,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "9cf8ae80-627b-5e34-96ca-5fd8d5d6b3a5",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 29,
+          "sha256": "ee2a17050c797c987a717711e4f5055057f245899a4f4d1dab4889c78861d489",
+          "score": 0.03125763125763126,
+          "lexical_rank": 5,
+          "latent_rank": 3
+        },
+        {
+          "rank": 4,
+          "chunk_id": "20a47c88-a975-5a99-b91c-b5746a31121f",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 25,
+          "sha256": "b99fb6af5a5dae8f6fa2dffaa1228cf00712a40cf3fbab578c93bea8601a4e89",
+          "score": 0.030798389007344232,
+          "lexical_rank": 3,
+          "latent_rank": 7
+        },
+        {
+          "rank": 5,
+          "chunk_id": "32511b36-8b65-59f0-971f-7f82edeceb9c",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 30,
+          "sha256": "8d79ce72b9188039e0d87f88336a1f8196b0fe2b4c41c1070d658795ce70bd75",
+          "score": 0.030330882352941176,
+          "lexical_rank": 4,
+          "latent_rank": 8
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-nearby-01",
+      "category": "nearby",
+      "document_id": "ssdf",
+      "mode": "hybrid",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        19
+      ],
+      "designated_pages": [
+        19
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.737,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "84a263cd-9200-53c3-8721-55fe21ce10a8",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 19,
+          "sha256": "351c19d9a2dfd20b7ec021b9d0b4c0cb2db60f9e49f64ddc4c673c6daee5e81b",
+          "score": 0.03278688524590164,
+          "lexical_rank": 1,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "4e07060b-96cd-5673-82f3-6f5d8ad46267",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 19,
+          "sha256": "3c1c97c4550cee590c0671fda5ca84f61b91669a89e35a9ebb4d6c142834bef9",
+          "score": 0.03225806451612903,
+          "lexical_rank": 2,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "1ac4feb7-fa64-5df3-8b01-3a3a636a133c",
+          "document_id": "genai-profile",
+          "version": 1,
+          "page": 44,
+          "sha256": "cb1cd2e61e5c7ffa5218ff69102e91a57d600442efdf77510bd36227c129453c",
+          "score": 0.031024531024531024,
+          "lexical_rank": 3,
+          "latent_rank": 6
+        },
+        {
+          "rank": 4,
+          "chunk_id": "53c902a0-bad6-5167-a536-ea4816cd55c0",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 21,
+          "sha256": "778a17b878484b8340555cfc4d8db657633cc6de4881382da3ccdf71c1313013",
+          "score": 0.030090497737556562,
+          "lexical_rank": 8,
+          "latent_rank": 5
+        },
+        {
+          "rank": 5,
+          "chunk_id": "fea5597f-e977-5d52-aec7-449ca3496039",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 3,
+          "sha256": "bf37da7cbb68addeb19ee73878f6175f2dce2e323621d71d3d326105f86422f0",
+          "score": 0.029513888888888888,
+          "lexical_rank": 4,
+          "latent_rank": 12
+        }
+      ],
+      "error_type": null
+    },
+    {
+      "case_id": "v2-ssdf-nearby-02",
+      "category": "nearby",
+      "document_id": "ssdf",
+      "mode": "hybrid",
+      "first_relevant_rank": 1,
+      "matched_pages": [
+        23
+      ],
+      "designated_pages": [
+        23
+      ],
+      "designated_page_recall": 1.0,
+      "took_ms": 2.489,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "8479ca7e-69ac-5a41-8c60-494df805ad1e",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 23,
+          "sha256": "b86849679cd29637fdf9fd3b954f1cd48af153fbcf054b73ec39888e1153497c",
+          "score": 0.03278688524590164,
+          "lexical_rank": 1,
+          "latent_rank": 1
+        },
+        {
+          "rank": 2,
+          "chunk_id": "b1247a2d-bd15-51b3-832f-f08b2c188da8",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 23,
+          "sha256": "4ec5d9324582433076f87291c536c325becbcd7385f79137c300b563ae339b71",
+          "score": 0.03200204813108039,
+          "lexical_rank": 3,
+          "latent_rank": 2
+        },
+        {
+          "rank": 3,
+          "chunk_id": "4ccdb338-38bc-5594-b35e-240e6fa6960d",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 24,
+          "sha256": "2dd637c6f02d3738b2b41e3f2ac70d5fe76f3b8305cdcbcca75cbfd6060f0464",
+          "score": 0.0315136476426799,
+          "lexical_rank": 2,
+          "latent_rank": 5
+        },
+        {
+          "rank": 4,
+          "chunk_id": "35d6480c-f9a8-50d3-8583-1e649ac6c627",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 18,
+          "sha256": "15cd34ff8515052e7bed796f55e3b722092182187ab1287cd9092c1a012a040d",
+          "score": 0.03125763125763126,
+          "lexical_rank": 5,
+          "latent_rank": 3
+        },
+        {
+          "rank": 5,
+          "chunk_id": "88609870-01c8-5658-a18c-47fa32fd9b99",
+          "document_id": "ssdf",
+          "version": 1,
+          "page": 22,
+          "sha256": "429feff1b881e8843c5b1796cfdd1bac6ec46375f45d9c1eb79423eae0a64ed9",
+          "score": 0.03125,
+          "lexical_rank": 4,
+          "latent_rank": 4
+        }
+      ],
+      "error_type": null
+    }
+  ],
+  "hashes": {
+    "policy_artifacts": {
+      "PROTOCOL.md": "19449aadd760f08a2d69e12d549c62406193c791f67073b1594efd0aa14e3851",
+      "SOURCE_CHECK.json": "6febf3502dde308107ffa30211c4b45b7f4a75d7b80750117b046c2e91059ccc"
+    },
+    "uv_lock": "076334d1a8fdf41f30fbcb2b34f46e1f8772736d1a5f1f8ffbb74b3aee913ba0",
+    "runner": "7c2d62e045cee30a13cba99883a86937f52e2c0b66ea70d3656e5784d69424da",
+    "algorithms": {
+      "app/retrieval.py": "9403551e2526b50774adaf1ec47775760db8ee04b611a63680d76be7a7fac68b",
+      "app/store.py": "5f877bb71578f37c87f24fe94945a61681e67edfbdb543d9e893eabac61e3c46"
+    },
+    "cases": "8f85aecd83993ba0b2cbf56b49704789ecb6be0388fd0b4d1bc54c9a29c95cc5",
+    "freeze": "c2b3558800f4f8d69737d3704e3b5530a9a6aa204b656708397507b29f224854",
+    "prepared_manifest": "676fc09bad7d520a928413f58b7ede18248ff5e60f1186c9dcda1a6f0703aef4",
+    "preparation": "f5ced51057e2d73089badb0cbed47d970232516e36aa9db0b244f95017999946"
+  },
+  "freeze": {
+    "frozen_at": "2026-10-16T21:27:38.468529+00:00",
+    "parameters": {
+      "cases": 24,
+      "documents": [
+        "ai-rmf",
+        "genai-profile",
+        "ssdf"
+      ],
+      "cases_per_document": 8,
+      "category_mix_per_document": {
+        "direct": 3,
+        "procedural": 3,
+        "nearby": 2
+      },
+      "modes": [
+        "lexical",
+        "latent",
+        "hybrid"
+      ],
+      "limit": 5,
+      "requests_per_case_per_mode": 1,
+      "planned_retrieval_requests": 72,
+      "query_scope": "all_three_original_active_documents; gold document IDs are grading-only",
+      "metrics": [
+        "page_hit_at_5",
+        "page_mrr_at_5"
+      ],
+      "page_basis": "1-based physical PDF page",
+      "model_calls_allowed": 0,
+      "top_k": 5
+    },
+    "policy": {
+      "first_evaluation_requires": "lead and independent source-review acceptance of these exact artifacts",
+      "implementation_task_context": "schema/protocol only; cases and support excluded",
+      "v1": "preserve unchanged and report separately",
+      "post_evaluation_tuning": "prohibited for this reported set; preserve original results and version corrections",
+      "network_model_installation_during_authoring": "none",
+      "evaluation_during_authoring": "none",
+      "review_status": "source cases accepted independently and by supervising review before first evaluation",
+      "accepted_proposal_sha256": "df6bcb35cef6676bba32eca7f8649c87a8fbafdda5a131f1c5d0b21232bb1c9f",
+      "protocol_sha256": "19449aadd760f08a2d69e12d549c62406193c791f67073b1594efd0aa14e3851",
+      "source_check_sha256": "6febf3502dde308107ffa30211c4b45b7f4a75d7b80750117b046c2e91059ccc",
+      "source_hash_origin": "original PDF hashes declared by pinned prepared manifest; no new PDF download/extraction/rehash in this pass",
+      "schema_note": "Runner freeze derives from the preserved accepted richer proposal; case and source pins are unchanged."
+    }
+  },
+  "runtime": {
+    "elapsed_seconds": 0.278,
+    "python": "3.14.8 (main, Sep 30 2026, 17:55:09) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "platform": "macOS-15.7.3-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu_count": 8,
+    "packages": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1"
+    },
+    "threads": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  }
+}

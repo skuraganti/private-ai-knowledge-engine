@@ -45,7 +45,7 @@ The evaluation uses 12 project-authored held-out questions, frozen by hash ([eva
 | Latent (TF-IDF/SVD) | 10/12 | 0.649 |
 | Hybrid (RRF) | 11/12 | 0.808 |
 
-Hybrid tied lexical on Hit@5 but had a lower MRR@5, and a development definition question missed its source page. These are recorded results ([examples/recorded-retrieval-evaluation.json](examples/recorded-retrieval-evaluation.json)) from one small corpus with incomplete relevance labels, not a general benchmark. Some live model evaluations abstained or failed. A safe abstention can still leave the question unanswered, so it is not counted as automatic success.
+Hybrid tied lexical on Hit@5 but had a lower MRR@5, and a recorded development definition answer left its information-task criterion unmet. These are recorded results ([examples/recorded-retrieval-evaluation.json](examples/recorded-retrieval-evaluation.json)) from one small corpus with incomplete relevance labels, not a general benchmark. The original four-call answer study recorded one supported answer and three safe abstentions, all with successful transport/schema validation. The development definition task missed its information criterion despite safe abstention. The [recorded diagnostics](examples/recorded-answer-diagnostics-v1.json) keep that distinction and exclude a separate browser repeat from benchmark denominators.
 
 ## Run locally
 
@@ -70,7 +70,7 @@ uv run python evaluate.py
 python3 -m http.server 8008 --bind 127.0.0.1 --directory docs
 ```
 
-Run bootstrap first. Native tests use fixtures and simulated model responses, with no live inference. `evaluate.py` reruns the frozen retrieval evaluation without network or model calls, writes `data/verification/retrieval.json` and replaces `data/prepared/evaluation.json` with a retrieval-only report (`live: null`). The tracked recorded example stays intact; a later bootstrap refuses to overwrite the changed local report, so use a separate checkout to reproduce the original bootstrap state. The last command previews Pages at http://127.0.0.1:8008; leave it running. In a second terminal, with agent-browser 0.38.1 installed, `sh scripts/check-pages.sh http://127.0.0.1:8008` runs `tests/pages-smoke.js`. The recorded release suite passed 36 native tests; those tests were not rerun for this documentation edit. Release checks and their limits are in [VERIFICATION.md](VERIFICATION.md).
+Run bootstrap first. Native tests use fixtures and simulated model responses, with no live inference. `evaluate.py` reruns the frozen retrieval evaluation without network or model calls, writes `data/verification/retrieval.json` and replaces `data/prepared/evaluation.json` with a retrieval-only report (`live: null`). The tracked recorded example stays intact; a later bootstrap refuses to overwrite the changed local report, so use a separate checkout to reproduce the original bootstrap state. The last command previews Pages at http://127.0.0.1:8008; leave it running. In a second terminal, with agent-browser 0.38.1 installed, `sh scripts/check-pages.sh http://127.0.0.1:8008` runs `tests/pages-smoke.js`. The original release suite passed 36 native tests; current maintenance checks are recorded separately below and in the verification report. Release checks and their limits are in [VERIFICATION.md](VERIFICATION.md).
 
 ## Scope and limitations
 
@@ -79,3 +79,5 @@ Folio is a single-user localhost app with no authentication, and it is not a dis
 ## Sources, attribution and license
 
 The documents are republished courtesy of the National Institute of Standards and Technology. No NIST endorsement is implied, and third-party material inside them can carry separate rights. Citations, DOIs and reuse terms are in [DATA_SOURCES.md](DATA_SOURCES.md), and source versions are in [SOURCE_MANIFEST.json](SOURCE_MANIFEST.json). Upstream components are credited in [UPSTREAM.md](UPSTREAM.md), and third-party licenses remain in force. Original application code and authored documentation have no open-source license grant; see [LICENSING.md](LICENSING.md).
+
+The separate frozen 24-case retrieval cohort and its guarded offline runner are described in [Evaluation protocol and diagnostics](docs/EVALUATION.md). It preserves the original 12-case results and does not enqueue model requests.

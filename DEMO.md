@@ -10,3 +10,5 @@ For a fresh checkout, first run `uv sync --frozen` and `uv run python scripts/bo
 6. Open the evaluation notebook. Lexical/hybrid designated-page Hit@5 were11/12; latent10/12. Read the lower hybrid MRR and development definition miss alongside the three tiny held-out live checks. Do not present this as a broad benchmark or production policy/compliance guidance.
 
 Stop your stack with `sh stack.sh stop` when finished. Data persist in its local volume.
+
+For the separately frozen 24-case offline retrieval evaluation and saved answer-abstention diagnostic, follow [docs/EVALUATION.md](docs/EVALUATION.md). This CLI report is separate from the application’s original 12-case notebook.

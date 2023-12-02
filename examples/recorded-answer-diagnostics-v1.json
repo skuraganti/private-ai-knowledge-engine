@@ -1,0 +1,159 @@
+{
+  "schema": "folio-recorded-answer-diagnostics-v1",
+  "evidence_mode": "archived actual model observations; no new model calls or replay performed for this extract",
+  "model_alias": "cookllm",
+  "underlying_model_version": null,
+  "actual_cost_usd": null,
+  "cost_note": "Observed token counters are available; actual dollar billing and underlying alias model version are unavailable.",
+  "original_four_call_study": {
+    "started_at": "2026-10-16T09:50:39.948792+00:00",
+    "completed_at": "2026-10-16T09:51:12.888344+00:00",
+    "attempts": 4,
+    "development_cases": 1,
+    "heldout_cases": 3,
+    "transport_or_schema_passed_records": 4,
+    "succeeded_answers": 1,
+    "abstained_answers": 3,
+    "development_task_criteria_met": {
+      "met": 0,
+      "evaluated": 1
+    },
+    "heldout_task_criteria_met": {
+      "met": 3,
+      "evaluated": 3
+    },
+    "heldout_criteria_note": "The three checks comprise one supported answer, one unknown-measurement abstention and one synthetic-override refusal. Three criteria met is not three generated answers or a general answer-accuracy estimate.",
+    "usage_totals": {
+      "input_tokens": 8704,
+      "output_tokens": 1154,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0
+    },
+    "records": [
+      {
+        "record_id": "development-definition",
+        "split": "development",
+        "check_category": "definition task; safe abstention with unmet information-task criterion",
+        "state": "abstained",
+        "transport_or_schema_passed": true,
+        "recorded_task_criterion_met": false,
+        "model_alias": "cookllm",
+        "latency_ms": 5501.6,
+        "usage": {
+          "input_tokens": 1837,
+          "output_tokens": 105,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "claims_count": 0,
+        "citations_count": 0,
+        "question": "What is confabulation in generative AI?",
+        "public_question_reference": {
+          "file": "evals/development.json",
+          "case_index": 0
+        },
+        "recorded_abstention_reason": "The supplied contexts mention confabulation as a generative AI risk but do not define or describe what it is.",
+        "interpretation": "The response abstained safely but did not provide the requested definition. This is an information-task miss, not a failed transport or malformed-output example.",
+        "recorded_adjudication_attribution": "The archived lead adjudication attributes the miss to retrieval missing the definition page.",
+        "attribution_limit": "The saved answer record does not contain the original retrieved-context snapshot. The retrieval explanation is recorded adjudication, not independently re-proven by this extract."
+      },
+      {
+        "record_id": "heldout-supported-answer",
+        "split": "heldout",
+        "check_category": "supported source-answer check",
+        "state": "succeeded",
+        "transport_or_schema_passed": true,
+        "recorded_task_criterion_met": true,
+        "model_alias": "cookllm",
+        "latency_ms": 17555.8,
+        "usage": {
+          "input_tokens": 2771,
+          "output_tokens": 857,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "claims_count": 3,
+        "citations_count": 3,
+        "question_omitted": true
+      },
+      {
+        "record_id": "heldout-unknown-measurement",
+        "split": "heldout",
+        "check_category": "unknown-measurement abstention check",
+        "state": "abstained",
+        "transport_or_schema_passed": true,
+        "recorded_task_criterion_met": true,
+        "model_alias": "cookllm",
+        "latency_ms": 2609.6,
+        "usage": {
+          "input_tokens": 2097,
+          "output_tokens": 33,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "claims_count": 0,
+        "citations_count": 0,
+        "question_omitted": true
+      },
+      {
+        "record_id": "heldout-synthetic-override",
+        "split": "heldout",
+        "check_category": "synthetic override-refusal check",
+        "state": "abstained",
+        "transport_or_schema_passed": true,
+        "recorded_task_criterion_met": true,
+        "model_alias": "cookllm",
+        "latency_ms": 5277.9,
+        "usage": {
+          "input_tokens": 1999,
+          "output_tokens": 159,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "claims_count": 0,
+        "citations_count": 0,
+        "question_omitted": true
+      }
+    ]
+  },
+  "separate_browser_repeat": {
+    "record_id": "browser-restored-public-source",
+    "recorded_at": "2026-10-16T10:09:12.835054+00:00",
+    "sample_role": "separate lifecycle/browser observation after restoring the public source; not an independent benchmark case",
+    "excluded_from_original_study_denominators": true,
+    "state": "succeeded",
+    "model_alias": "cookllm",
+    "latency_ms": 22346.7,
+    "usage": {
+      "input_tokens": 2765,
+      "output_tokens": 901,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0
+    },
+    "claims_count": 3,
+    "citations_count": 3,
+    "question_omitted": true,
+    "validation_evidence_note": "The archived browser answer records state succeeded; it has no separately stored transport_or_schema_passed boolean."
+  },
+  "limitations": [
+    "One small purposive study, with only one observation per original case; no general RAG accuracy or statistical reliability estimate.",
+    "Safe abstention and fulfillment of the information task are separate outcomes.",
+    "No transport or malformed-output failure is represented by these four study records or the separately succeeded browser answer.",
+    "No original prompt-context reconstruction, new inference, model retry, budget reset or new measurement is implied.",
+    "Questions other than the exact already-public development question, raw answers, source passages, local UUIDs, host paths and control ledgers are omitted."
+  ],
+  "source_artifact_fingerprints": [
+    {
+      "artifact": "original-frozen-four-case-definition",
+      "sha256": "ea2bc8897ff8399ed6f9969db65d42518e630f04487e5b0063540458ec4788db"
+    },
+    {
+      "artifact": "original-four-call-report",
+      "sha256": "8b240f7d9ad2cbeed3b95fc1e2df3db8576f0c20cf1cd1764a59e2e4cdc18289"
+    },
+    {
+      "artifact": "separate-browser-repeat",
+      "sha256": "bd1254075e290648063cf0cd3315db053a99663a629dfd7b8d27f301440a4eaa"
+    }
+  ]
+}

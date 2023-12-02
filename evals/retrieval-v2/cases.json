@@ -1,0 +1,376 @@
+{
+  "cases": [
+    {
+      "id": "v2-ai-rmf-direct-01",
+      "query": "In the AI RMF, what does robustness mean when an AI system encounters different circumstances?",
+      "document_id": "ai-rmf",
+      "pages": [
+        19
+      ],
+      "support": [
+        {
+          "page": 19,
+          "excerpt": "Robustness or generalizability is defined as the “ability of a system to maintain its level\nof performance under a variety of circumstances” (Source: ISO /IEC TS 5723:2022)."
+        }
+      ],
+      "category": "direct"
+    },
+    {
+      "id": "v2-ai-rmf-direct-02",
+      "query": "Which three broad categories of AI bias does the AI RMF identify?",
+      "document_id": "ai-rmf",
+      "pages": [
+        23
+      ],
+      "support": [
+        {
+          "page": 23,
+          "excerpt": "NIST has identified\nthree major categories of AI bias to be considered and managed: systemic, computational\nand statistical, and human-cognitive."
+        }
+      ],
+      "category": "direct"
+    },
+    {
+      "id": "v2-ai-rmf-direct-03",
+      "query": "Which privacy values should guide AI system design, development and deployment?",
+      "document_id": "ai-rmf",
+      "pages": [
+        22
+      ],
+      "support": [
+        {
+          "page": 22,
+          "excerpt": "Privacy values such as anonymity, confidentiality, and control generally should guide choices\nfor AI system design, development, and deployment."
+        }
+      ],
+      "category": "direct"
+    },
+    {
+      "id": "v2-ai-rmf-procedural-01",
+      "query": "What arrangements should exist if high-risk third-party AI systems or data suffer a failure or incident?",
+      "document_id": "ai-rmf",
+      "pages": [
+        29
+      ],
+      "support": [
+        {
+          "page": 29,
+          "excerpt": "GOVERN 6.2: Contingency processes are in place to handle\nfailures or incidents in third-party data or AI systems deemed to\nbe high-risk."
+        }
+      ],
+      "category": "procedural"
+    },
+    {
+      "id": "v2-ai-rmf-procedural-02",
+      "query": "How should reports of problems and appeals from end users or affected communities feed into AI evaluation?",
+      "document_id": "ai-rmf",
+      "pages": [
+        36
+      ],
+      "support": [
+        {
+          "page": 36,
+          "excerpt": "MEASURE 3.3: Feedback processes for end users and impacted\ncommunities to report problems and appeal system outcomes are\nestablished and integrated into AI system evaluation metrics."
+        }
+      ],
+      "category": "procedural"
+    },
+    {
+      "id": "v2-ai-rmf-procedural-03",
+      "query": "What should an organization arrange when an AI system performs inconsistently with its intended use?",
+      "document_id": "ai-rmf",
+      "pages": [
+        37
+      ],
+      "support": [
+        {
+          "page": 37,
+          "excerpt": "MANAGE 2.4: Mechanisms are in place and applied, and respon-\nsibilities are assigned and understood, to supersede, disengage, or\ndeactivate AI systems that demonstrate performance or outcomes\ninconsistent with intended use."
+        }
+      ],
+      "category": "procedural"
+    },
+    {
+      "id": "v2-ai-rmf-nearby-01",
+      "query": "How does the AI RMF distinguish explainability from interpretability?",
+      "document_id": "ai-rmf",
+      "pages": [
+        21
+      ],
+      "support": [
+        {
+          "page": 21,
+          "excerpt": "Explainability refers to a representation of the mechanisms underlying AI systems’ oper-\nation, whereas interpretability refers to the meaning of AI systems’ output in the context\nof their designed functional purposes."
+        }
+      ],
+      "category": "nearby"
+    },
+    {
+      "id": "v2-ai-rmf-nearby-02",
+      "query": "How does an AI RMF Current Profile differ from a Target Profile?",
+      "document_id": "ai-rmf",
+      "pages": [
+        38
+      ],
+      "support": [
+        {
+          "page": 38,
+          "excerpt": "An AI RMF Current Profile indicates how AI is currently being\nmanaged and the related risks in terms of current outcomes. A Target Profile indicates the\noutcomes needed to achieve the desired or target AI risk management goals."
+        }
+      ],
+      "category": "nearby"
+    },
+    {
+      "id": "v2-genai-profile-direct-01",
+      "query": "Which factors make generative AI energy use and carbon emissions vary?",
+      "document_id": "genai-profile",
+      "pages": [
+        12
+      ],
+      "support": [
+        {
+          "page": 12,
+          "excerpt": "Energy and carbon emissions vary based on \nwhat is being done with the GAI model (i.e., pre-training, ﬁne-tuning, inference), the modality of the \ncontent, hardware used, and type of task or application."
+        }
+      ],
+      "category": "direct"
+    },
+    {
+      "id": "v2-genai-profile-direct-02",
+      "query": "What information can generative-content provenance metadata record?",
+      "document_id": "genai-profile",
+      "pages": [
+        55
+      ],
+      "support": [
+        {
+          "page": 55,
+          "excerpt": "Provenance metadata can include information about GAI model developers or creators of GAI content, \ndate/time of creation, location, modiﬁcations, and sources."
+        }
+      ],
+      "category": "direct"
+    },
+    {
+      "id": "v2-genai-profile-direct-03",
+      "query": "What is data poisoning in the Generative AI Profile?",
+      "document_id": "genai-profile",
+      "pages": [
+        15
+      ],
+      "support": [
+        {
+          "page": 15,
+          "excerpt": "Another cybersecurity risk to GAI is data poisoning, in which an adversary compromises a training \ndataset used by a model to manipulate its outputs or operation."
+        }
+      ],
+      "category": "direct"
+    },
+    {
+      "id": "v2-genai-profile-procedural-01",
+      "query": "Before decommissioning a generative AI system, what data-security and dependency considerations should be reviewed?",
+      "document_id": "genai-profile",
+      "pages": [
+        21
+      ],
+      "support": [
+        {
+          "page": 21,
+          "excerpt": "Consider the following factors when decommissioning GAI systems: Data \nretention requirements; Data security, e.g., containment, protocols, Data leakage \nafter decommissioning; Dependencies between upstream, downstream, or other \ndata, internet of things (IOT) or AI systems;"
+        }
+      ],
+      "category": "procedural"
+    },
+    {
+      "id": "v2-genai-profile-procedural-02",
+      "query": "How should provenance be maintained when third parties change organizational content?",
+      "document_id": "genai-profile",
+      "pages": [
+        25
+      ],
+      "support": [
+        {
+          "page": 25,
+          "excerpt": "GV-6.1-008 Maintain records of changes to content made by third parties to promote content provenance, including sources, timestamps, metadata."
+        }
+      ],
+      "category": "procedural"
+    },
+    {
+      "id": "v2-genai-profile-procedural-03",
+      "query": "Which documentation practices and records can help teams share information and respond to generative AI incidents?",
+      "document_id": "genai-profile",
+      "pages": [
+        57
+      ],
+      "support": [
+        {
+          "page": 57,
+          "excerpt": "Documentation practices including logging, recording, and analyzing GAI incidents can facilitate \nsmoother sharing of information with relevant AI Actors. Regular information sharing, change \nmanagement records, version history and metadata can also empower AI Actors responding to and \nmanaging AI incidents."
+        }
+      ],
+      "category": "procedural"
+    },
+    {
+      "id": "v2-genai-profile-nearby-01",
+      "query": "How do direct and indirect prompt-injection attacks differ in the Generative AI Profile?",
+      "document_id": "genai-profile",
+      "pages": [
+        15
+      ],
+      "support": [
+        {
+          "page": 15,
+          "excerpt": "In direct prompt injections, attackers might craft malicious prompts and \ninput them directly to a GAI system, with a variety of downstream negative consequences to \ninterconnected systems."
+        },
+        {
+          "page": 15,
+          "excerpt": "Indirect prompt injection attacks occur when adversaries remotely (i.e., without \na direct interface) exploit LLM-integrated applications by injecting prompts into data likely to be \nretrieved."
+        }
+      ],
+      "category": "nearby"
+    },
+    {
+      "id": "v2-genai-profile-nearby-02",
+      "query": "How does field testing differ from AI red-teaming when evaluating a generative AI system?",
+      "document_id": "genai-profile",
+      "pages": [
+        53
+      ],
+      "support": [
+        {
+          "page": 53,
+          "excerpt": "Field Testing: Methods used to determine how people interact with, consume, use, and make \nsense of AI-generated information, and subsequent actions and eﬀects, including UX, usability, \nand other structured, randomized experiments."
+        },
+        {
+          "page": 53,
+          "excerpt": "AI Red-teaming: A structured testing exercise used to probe an AI system to ﬁnd ﬂaws and \nvulnerabilities such as inaccurate, harmful, or discriminatory outputs, often in a controlled \nenvironment and in collaboration with system developers."
+        }
+      ],
+      "category": "nearby"
+    },
+    {
+      "id": "v2-ssdf-direct-01",
+      "query": "What does PO.3.3 ask organizations to configure their secure-development tools to generate?",
+      "document_id": "ssdf",
+      "pages": [
+        16
+      ],
+      "support": [
+        {
+          "page": 16,
+          "excerpt": "PO.3.3: Configure tools to generate artifacts6 of their \nsupport of secure software development practices as \ndefined by the organization."
+        }
+      ],
+      "category": "direct"
+    },
+    {
+      "id": "v2-ssdf-direct-02",
+      "query": "Who should receive role-based secure-development training under the SSDF?",
+      "document_id": "ssdf",
+      "pages": [
+        15
+      ],
+      "support": [
+        {
+          "page": 15,
+          "excerpt": "PO.2.2: Provide role-based training for all personnel \nwith responsibilities that contribute to secure \ndevelopment."
+        }
+      ],
+      "category": "direct"
+    },
+    {
+      "id": "v2-ssdf-direct-03",
+      "query": "Which external sources of potential software vulnerabilities should a producer gather information from?",
+      "document_id": "ssdf",
+      "pages": [
+        25
+      ],
+      "support": [
+        {
+          "page": 25,
+          "excerpt": "RV.1.1: Gather information from software acquirers, \nusers, and public sources on potential vulnerabilities in \nthe software and third-party components that the \nsoftware uses, and investigate all credible reports."
+        }
+      ],
+      "category": "direct"
+    },
+    {
+      "id": "v2-ssdf-procedural-01",
+      "query": "How should development endpoints and resources be configured to limit unnecessary capability and access?",
+      "document_id": "ssdf",
+      "pages": [
+        18
+      ],
+      "support": [
+        {
+          "page": 18,
+          "excerpt": "Example 2: Configure each development endpoint and the development \nresources to provide the least functionality needed by users and services and to \nenforce the principle of least privilege."
+        }
+      ],
+      "category": "procedural"
+    },
+    {
+      "id": "v2-ssdf-procedural-02",
+      "query": "After acquiring third-party software components, how should compliance with organizational requirements be maintained over time?",
+      "document_id": "ssdf",
+      "pages": [
+        22
+      ],
+      "support": [
+        {
+          "page": 22,
+          "excerpt": "PW.4.4: Verify that acquired commercial, open-source, \nand all other third-party software components comply \nwith the requirements, as defined by the organization, \nthroughout their life cycles."
+        }
+      ],
+      "category": "procedural"
+    },
+    {
+      "id": "v2-ssdf-procedural-03",
+      "query": "What should a producer do when a permanent mitigation for a vulnerability is not yet available?",
+      "document_id": "ssdf",
+      "pages": [
+        27
+      ],
+      "support": [
+        {
+          "page": 27,
+          "excerpt": "Example 2: If a permanent mitigation for a vulnerability is not yet available, \ndetermine how the vulnerability can be temporarily mitigated until the permanent \nsolution is available, and add that temporary remediation to the plan."
+        }
+      ],
+      "category": "procedural"
+    },
+    {
+      "id": "v2-ssdf-nearby-01",
+      "query": "How do verifying a software release’s integrity and archiving that release serve different purposes?",
+      "document_id": "ssdf",
+      "pages": [
+        19
+      ],
+      "support": [
+        {
+          "page": 19,
+          "excerpt": "Provide a Mechanism for Verifying Software \nRelease Integrity (PS.2): Help software \nacquirers ensure that the software they acquire \nis legitimate and has not been tampered with."
+        },
+        {
+          "page": 19,
+          "excerpt": "Archive and Protect Each Software Release \n(PS.3): Preserve software releases in order to \nhelp identify, analyze, and eliminate \nvulnerabilities discovered in the software after \nrelease."
+        }
+      ],
+      "category": "nearby"
+    },
+    {
+      "id": "v2-ssdf-nearby-02",
+      "query": "How does the SSDF distinguish code review from code analysis?",
+      "document_id": "ssdf",
+      "pages": [
+        23
+      ],
+      "support": [
+        {
+          "page": 23,
+          "excerpt": "PW.7.1: Determine whether code review (a person \nlooks directly at the code to find issues) and/or code \nanalysis (tools are used to find issues in code, either in \na fully automated way or in conjunction with a person) \nshould be used, as defined by the organization."
+        }
+      ],
+      "category": "nearby"
+    }
+  ]
+}
