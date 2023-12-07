@@ -2,23 +2,25 @@
 
 **[Open the GitHub Pages browser demo](https://skuraganti.github.io/private-ai-knowledge-engine/)** · [Architecture](ARCHITECTURE.md) · [Data sources](DATA_SOURCES.md) · [Verification](VERIFICATION.md) · [Public roadmap](https://github.com/users/skuraganti/projects/4)
 
-Folio is a local, single-user workbench for researching engineering-risk questions in a pinned document corpus. Public-document results link to an exact passage, a physical PDF page and hash provenance. Imported notes use local text-page indices; a search-hit hash identifies chunk text, while the document inspector exposes the original PDF hash. The corpus is three original NIST publications: AI RMF 1.0 (NIST AI 100-1), the Generative AI Profile (NIST AI 600-1) and SSDF 1.1 (NIST SP 800-218). Folio is a retrieval and evidence tool, not compliance or legal advice.
+Use Folio to research engineering-risk questions in a local, single-user collection of pinned documents. Public-document results link to an exact passage and physical PDF page, with hashes to trace the source. A search-hit hash identifies the chunk text; the document inspector shows the original PDF hash. Imported notes use local text-page indices.
+
+The corpus is three original NIST publications: AI RMF 1.0 (NIST AI 100-1), the Generative AI Profile (NIST AI 600-1) and SSDF 1.1 (NIST SP 800-218). Folio is a retrieval and evidence tool, not compliance or legal advice.
 
 ![Folio GitHub Pages demo: a lexical search over original NIST passages, with an extractive answer quoting matched excerpts, each showing its document, physical PDF page and official PDF link.](assets/folio-demo.png)
 
 ## A research workflow
 
 1. Select SSDF and ask *What does PW.9 say about secure software configuration defaults?*
-2. Compare the lexical, latent and hybrid rankings. Open the cited passage on SSDF physical PDF page 25, and check the document's SHA-256 against [DATA_SOURCES.md](DATA_SOURCES.md).
-3. Import a short private note, search one of its unique terms, edit it and watch the version change and the old term disappear. Delete it, and it leaves search results and invalidates earlier answers.
+2. Compare the lexical (word-based), latent and hybrid rankings. Open the cited passage on SSDF physical PDF page 25, and check the document's SHA-256 against [DATA_SOURCES.md](DATA_SOURCES.md).
+3. Import a short private note and search one of its unique terms. Edit it to see the version change and the old term disappear. Deleting it removes it from search results and invalidates earlier answers.
 4. Open the evaluation view, including where hybrid retrieval did *worse*.
 
 Public PDF pages are 1-based physical pages, not printed page numbers. An exact quote proves where text came from, not that a claim is true.
 
 ## How it works
 
-- **Hybrid retrieval.** SQLite FTS5 BM25 and a local TF-IDF + truncated SVD model each rank chunks. Equal-weight reciprocal rank fusion (k = 60, deterministic ties) combines them. The latent model is refitted in memory over active chunks only (at most 1,000 chunks and 10,000 features). It is not a neural embedding, and no pretrained weights are downloaded.
-- **Incremental updates and deletion.** A document's identity covers its original bytes and prepared page content. Only changed documents replace their chunks. Any corpus change invalidates the latent cache, rebuilt on the next latent/hybrid query, and cancels or invalidates dependent local answers.
+- **Hybrid retrieval.** Two methods rank chunks of text: SQLite FTS5 BM25 for word matches, and a local TF-IDF + truncated SVD model for latent associations. Equal-weight reciprocal rank fusion (k = 60, deterministic ties) combines them. The latent model is refitted in memory over active chunks only (at most 1,000 chunks and 10,000 features). It is not a neural embedding, and no pretrained weights are downloaded.
+- **Incremental updates and deletion.** Folio identifies a document by its original bytes and prepared page content. Only changed documents replace their chunks. A corpus change marks the latent cache as out of date and cancels or invalidates dependent local answers. The next latent/hybrid query rebuilds the cache.
 - **Local private-document search.** Imported document snippets are excluded from inference. If any retrieved passage is private, generation is refused and search stays local. The optional bridge also re-checks each excerpt against the pinned public originals. Optional generation sends the entered question and approved public snippets through that bridge; keep private content out of the question.
 - **Evidence provenance.** Chunk IDs are derived from document, version, page and position. Each accepted generated claim needs one to three exact quotes from the current indexed version. A stale or invalid citation fails visibly instead of being repaired.
 
